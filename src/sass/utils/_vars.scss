@@ -1,0 +1,26 @@
+$color: (
+'text-color-light': #FCFCFC,
+'text-color-dark': #131313,
+'accent-color': #F8D24E,
+);
+
+@function getColor($key) {
+  @return map-get($color, $key);
+};
+
+$bgColor: (
+  'main': #84A178,
+);
+
+@function getBgColor($key) {
+  @return map-get($bgColor, $key);
+};
+
+$fontFamily: (
+  'main': 'Montserrat',
+  'secondary': 'Seymour One',
+);
+
+@function getFontFamily($key) {
+  @return map-get($fontFamily, $key);
+};
