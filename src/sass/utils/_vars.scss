@@ -2,18 +2,11 @@ $color: (
 'text-color-light': #FCFCFC,
 'text-color-dark': #131313,
 'accent-color': #F8D24E,
+'background-color': #84A178,
 );
 
 @function getColor($key) {
   @return map-get($color, $key);
-};
-
-$bgColor: (
-  'main': #84A178,
-);
-
-@function getBgColor($key) {
-  @return map-get($bgColor, $key);
 };
 
 $fontFamily: (
@@ -24,3 +17,6 @@ $fontFamily: (
 @function getFontFamily($key) {
   @return map-get($fontFamily, $key);
 };
+
+$time-hover:250ms;
+$time-function:cubic-bezier(0.4, 0, 0.2, 1);
