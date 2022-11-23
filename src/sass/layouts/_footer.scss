@@ -1,5 +1,5 @@
 .footer {
-  background-color: getBgColor('main');
+  background-color: getColor('background-color');
 }
 
 .footer__container {
@@ -108,7 +108,7 @@
   justify-content: center;
   width: 34px;
   height: 34px;
-  color: #84a178;
+  color: getColor('background-color');
   background-color: getColor('accent-color');
   border-radius: 50%;
   outline: transparent;
