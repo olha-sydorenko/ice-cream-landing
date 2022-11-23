@@ -1,0 +1,89 @@
+.products {
+  background-color: aquamarine;
+  max-width: 460px;
+
+  &__description {
+    display: inline-block;
+    margin-bottom: 12 px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: getFontFamily('main'), sans-serif;
+    color: getColor('text-color-dark');
+    text-align: center;
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 148px;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 168px;
+    list-style: none;
+  }
+
+  &__item {
+    max-width: 100%;
+    height: 420px;
+    padding-top: 123px;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: #efd478;
+    border-radius: 24px;
+    &::before {
+      content: url('/src/images/products/ice-cream-mob.jpg');
+      width: 200px;
+      height: 211px;
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &:first-child {
+      background-color: #aec6a5;
+    }
+
+    &:last-child {
+      background-color: #d6936d;
+    }
+  }
+
+  &__wrap {
+    width: 230px;
+  }
+
+  &__name {
+    margin-bottom: 40px;
+    font-family: getFontFamily('main'), sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.04em;
+    text-align: center;
+    color: getColor('text-color-dark');
+  }
+
+  &__text {
+    font-family: getFontFamily('main'), sans-serif;
+    font-size: 14px;
+    line-height: 1.76;
+    letter-spacing: 0.04em;
+    text-align: center;
+    align-items: center;
+    color: getColor('text-color-dark');
+  }
+
+  &__btn {
+    margin: 0 auto;
+    fill: getColor('text-color-dark');
+  }
+}
