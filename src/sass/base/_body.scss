@@ -2,4 +2,21 @@ body {
   font-family: getFontFamily('main'), sans-serif;
   font-size: 16px;
   color: getColor('text-color-light');
+  cursor: url('./../images/сursor.png'), auto;
+
+  &:hover {
+    cursor: url('./../images/сursor.png'), auto;
+  }
+}
+
+a {
+  &:hover {
+    cursor: url('./../images/сursor.png'), auto;
+  }
+}
+
+button {
+  &:hover {
+    cursor: url('./../images/сursor.png'), auto;
+  }
 }
