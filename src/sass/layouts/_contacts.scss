@@ -79,12 +79,18 @@
   // font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
-
   letter-spacing: 0.04em;
 
   color: getColor('text-color-dark');
 
   padding-bottom: 8px;
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
 }
 
 .contacts-shedule__list {
