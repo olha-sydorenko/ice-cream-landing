@@ -1,0 +1,43 @@
+.backdrop {
+  position: fixed;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: opacity $time-hover $time-function;
+}
+.buy-now-modal {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 280px;
+  padding: 28px;
+  background-color: #fcfcfc;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+}
+
+.modal__close-btn {
+}
+.buy-now-modal__title {
+  font-family: getFontFamily('secondary');
+  font-size: 16px;
+  line-height: 1.5;
+  color: getColor('text-color-dark');
+}
+.buy-now-modal__list {
+}
+.buy-now-modal__item {
+}
+.buy-now-modal__form {
+}
+.form {
+}
+.form__label {
+}
+.form__input {
+}
+.form__textarea {
+}
