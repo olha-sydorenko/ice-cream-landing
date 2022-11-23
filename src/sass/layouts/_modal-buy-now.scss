@@ -20,17 +20,51 @@
 }
 
 .modal__close-btn {
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 .buy-now-modal__title {
+  margin-bottom: 83px;
   font-family: getFontFamily('secondary');
   font-size: 16px;
   line-height: 1.5;
   color: getColor('text-color-dark');
 }
 .buy-now-modal__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
 }
 .buy-now-modal__item {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 132px;
+  height: 136px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: getColor('text-color-dark');
+  border: 2px solid #96af8c;
+  border-radius: 15.7808px;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 132px;
+    height: 132px;
+    background-image: url();
+  }
 }
+.buy-now-modal__product-title {
+padding-bottom: 20px;
+margin-top: auto;
+}
+
 .buy-now-modal__form {
 }
 .form {
