@@ -1,0 +1,22 @@
+.header {
+  width: 100%;
+  display: flex;
+  position: absolute;
+  margin-top: 12px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-menu {
+  display: none;
+}
+
+.mob-header-menu {
+  display: none;
+}
+.header-icon {
+  background-color: transparent;
+  border-radius: 0;
+}
+
