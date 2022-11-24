@@ -1,34 +1,8 @@
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: transparent;
-
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  -webkit-justify-content: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-
 .two-swipers {
   background-image: url('../images/bg/gallery-bg-ds@2x.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  flex-grow: 1;
 }
 
 .responce-photo {
@@ -42,6 +16,7 @@
   width: 100%;
   padding: 35px 39px 35px 39px;
 
+<<<<<<< Updated upstream
   @include tablet {
     padding-top: 28px;
     padding-bottom: 28px;
@@ -56,13 +31,22 @@
   text-align: center;
   color: #fcfcfc;
 
+=======
+>>>>>>> Stashed changes
   @include tablet {
     padding-top: 28px;
     padding-bottom: 28px;
-    width: 100%;
     height: 138px;
     font-size: 14px;
   }
+}
+.responce-text {
+
+  font-size: 12px;
+  line-height: 2.55;
+  text-align: center;
+  color: #fcfcfc;
+
   @include desktop {
     font-size: 16px;
   }
@@ -82,9 +66,9 @@
 .mySwipertwo > .swiper-wrapper > .swiper-slide {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   flex-direction: column;
   gap: 32px;
-  background-color: transparent;
   padding-bottom: 40px;
 }
 
@@ -104,7 +88,7 @@
   color: #84a178;
 }
 
-.gallery-image {
+.gallery__image {
   width: 280px;
   height: 130px;
   border-radius: 8px;
