@@ -1,0 +1,160 @@
+.backdrop {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2);
+  transition: opacity 300ms linear, visibility 300ms linear;
+}
+
+.modal {
+  width: 90%;
+  width: 280px;
+  height: 674px;
+
+  background-color: #fcfcfc;
+
+  padding: 28px;
+
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleY(1) rotate(0);
+  transition: transform 300ms linear;
+
+  @include tablet {
+    width: 568px;
+    height: 668px;
+    padding: 32px 60px;
+  }
+
+  //   ????? z-index?????
+}
+
+.modal-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, 100%) scale(5) rotate(120deg);
+}
+
+.close-btn {
+  position: absolute;
+  right: 5px;
+  top: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(0, 0, 0, 0);
+  border-radius: 50%;
+  background-color: #fcfcfc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:focus,
+  &:hover {
+    fill: #f8d24e;
+    border-color: #f8d24e;
+  }
+}
+
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.franchise-title {
+  font-family: 'Seymour One';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+
+  text-align: center;
+
+  color: #131313;
+
+  margin-bottom: 20px;
+  @include tablet {
+    margin-bottom: 24px;
+    font-size: 20px;
+    line-height: 1.4;
+  }
+}
+
+.franchise-description {
+  font-size: 14px;
+  line-height: 1.4;
+  color: #131313;
+  @include tablet {
+    font-size: 16px;
+  }
+}
+
+.modal-input,
+.modal-text {
+  width: 100%;
+  height: 40px;
+  background: rgba(248, 210, 78, 0.1);
+  border: 1px solid #84a178;
+  border-radius: 10px;
+  outline: transparent;
+  font-size: 14px;
+  color: #000000;
+  padding-left: 12px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  &:focus {
+    border-color: var(--accent-color);
+  }
+  &::placeholder {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.01em;
+
+    color: var(--primary-text-color);
+  }
+  &:not(:placeholder-shown):not(:focus):valid {
+    background-color: rgba(159, 245, 159, 0.418);
+  }
+  &:not(:placeholder-shown):not(:focus):invalid {
+    background-color: rgba(245, 159, 159, 0.418);
+  }
+}
+
+.modal-text {
+  height: 64px;
+}
+
+.send-btn {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.21;
+
+  color: #131313;
+
+  text-align: center;
+
+  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 121px;
+  height: 42px;
+
+  background: #f8d24e;
+  border-radius: 10px;
+  border: none;
+
+  margin: 0 auto;
+}

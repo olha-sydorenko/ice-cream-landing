@@ -1,0 +1,57 @@
+<div class="backdrop" data-modal>
+  <!-- Додай класс is-hiden -->
+  <div class="modal">
+    <button type="button" class="close-btn" data-modal-close>
+      <svg>
+        <use href="./images/icons.svg#icon-modal-close"></use>
+      </svg>
+    </button>
+
+    <p class="franchise-title">
+      Thank you for your interest in owning an Ice Cream shop
+    </p>
+    <p class="franchise-description">
+      Due to the overwhelming volume of franchise requests we are not accepting
+      new franchisee applications at this time. Once the application process
+      resumes, we will contact you for further information. Please fill out the
+      contact information below and we will reach out for additional
+      information. We appreciate your patience.
+    </p>
+    <form class="modal-form">
+      <input
+        type="text"
+        class="modal-input"
+        name="user-name"
+        placeholder="Name"
+        minlength="2"
+        required
+      />
+
+      <input
+        type="text"
+        class="modal-input"
+        name="user-phone"
+        placeholder="Phone"
+        minlength="2"
+        required
+      />
+      <input
+        type="email"
+        class="modal-input"
+        name="user-email"
+        placeholder="Email"
+        minlength="2"
+        required
+      />
+
+      <textarea
+        name="user-comment"
+        id="user-comment"
+        class="modal-text"
+        placeholder="Coment"
+      ></textarea>
+    </form>
+
+    <button type="submit" class="btn send-btn">Submit</button>
+  </div>
+</div>
