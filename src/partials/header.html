@@ -18,8 +18,14 @@
       </svg>
     </button>
     <div class="mob-menu-container is-hidden" data-menu>
-      <nav class="nav">
-          <a href="index.html">
+      <button class="mob-header-close-btn close-btn" type="button" data-menu-close>
+        <svg class="header-icon header-close-icon " width="32" height="32">
+          <use href='./images/header/header-icons.svg#icon-ep_close'></use>
+        </svg>
+      </button>
+      <div class="mob-menu-wrap">
+        <nav class="nav">
+          <a class="menu-header-logo" href="index.html">
             <img class="mob-header-menu-logo" src="./images/header/logo-mob@1x.png" width="40" height="37">
           </a>
           <ul class="mob-header-menu list">
@@ -29,11 +35,8 @@
             <li class="mob-header-menu-item"><a class="link" href="">Contact</a></li>
           </ul>
         </nav>
-      <button class="btn mob-buy-btn" type="button">Buy now</button>
+        <button class="btn mob-buy-btn" type="button">Buy now</button>
       </div>
-      <button class="mob-header-close-btn close-btn" type="button" data-menu-close>
-        <svg class="header-icon header-close-icon " width="32" height="32">
-          <use href='./images/header/header-icons.svg#icon-ep_close'></use>
-        </svg>
+      </div>
   </div>
 </header>
