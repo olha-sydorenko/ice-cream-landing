@@ -56,6 +56,7 @@
 }
 
 .contacts__address-link {
+  display: block;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.83;
@@ -64,7 +65,8 @@
 
   color: #d6936d;
 
-  @include tablet {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    min-height: 109px;
     font-size: 14px;
   }
 
@@ -147,6 +149,7 @@
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
+  align-items: center;
   gap: 16px;
   @include tablet {
     flex-wrap: nowrap;
