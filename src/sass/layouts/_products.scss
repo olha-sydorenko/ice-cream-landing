@@ -7,6 +7,13 @@
     background-image: url(../images/bg/products-bg-mb@2x.png);
   }
 
+  @include tablet {
+    background-image: url(../images/bg/products-bg-tb.png);
+    @include retina {
+      background-image: url(../images/bg/products-bg-tb@2x.png);
+    }
+  }
+
   &__description {
     color: getColor('text-color-dark');
     text-align: center;
@@ -16,6 +23,10 @@
     text-align: center;
     margin-top: 12px;
     margin-bottom: 148px;
+
+    @include tablet {
+      margin-bottom: 200px;
+    }
   }
 
   &__list {
@@ -23,6 +34,12 @@
     flex-direction: column;
     gap: 168px;
     align-items: center;
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-around;
+      gap: 16px;
+    }
   }
 
   &__item {
@@ -38,6 +55,13 @@
     align-items: center;
     position: relative;
     border-radius: 24px;
+    @include tablet {
+      height: 548px;
+      padding-top: 108px;
+      padding-left: 26px;
+      padding-right: 26px;
+      padding-bottom: 12px;
+    }
 
     &::before {
       content: '';
@@ -50,15 +74,25 @@
       top: 0;
       left: 50%;
       transform: translate(-50%, -50%);
+      @include tablet {
+        width: 200px;
+        height: 208px;
+      }
     }
 
     &:first-child {
       background-color: #aec6a5;
       &::before {
-        background-image: url('../images/products/ice-cream-mb.png');
-
+        background-image: url(../images/products/ice-cream-mb.png);
         @include retina {
-          background-image: url('../images/products/ice-cream-mb@2x.png');
+          background-image: url(../images/products/ice-cream-mb@2x.png);
+        }
+
+        @include tablet {
+          background-image: url(../images/products/ice-cream-tb.png);
+          @include retina {
+            background-image: url(../images/products/ice-cream-tb@2x.png);
+          }
         }
       }
     }
@@ -66,13 +100,18 @@
     &:nth-child(2) {
       background-color: #efd478;
       &::before {
-        background-image: url('../images/products/ice-coffee-mb.png');
+        background-image: url(../images/products/ice-coffee-mb.png);
         @include retina {
-          background-image: url('../images/products/ice-coffee-mb@2x.png');
+          background-image: url(../images/products/ice-coffee-mb@2x.png);
+        }
+        @include tablet {
+          background-image: url(../images/products/ice-coffee-tb.png);
+          @include retina {
+            background-image: url(../images/products/ice-coffee-tb@2x.png);
+          }
         }
       }
     }
-
     &:last-child {
       background-color: #d6936d;
       &::before {
@@ -80,12 +119,22 @@
         @include retina {
           background-image: url('../images/products/milkshakes-mb@2x-min.png');
         }
+
+        @include tablet {
+          background-image: url(../images/products/milkshakes-tb.png);
+          @include retina {
+            background-image: url(../images/products/milkshakes-tb@2x.png);
+          }
+        }
       }
     }
   }
 
   &__wrap {
     width: 230px;
+    @include tablet {
+      width: 339px;
+    }
   }
 
   &__name {
@@ -97,6 +146,9 @@
     text-align: center;
     color: getColor('text-color-dark');
     text-transform: uppercase;
+    @include tablet {
+      font-size: 20px;
+    }
   }
 
   &__text {
@@ -107,6 +159,9 @@
     text-align: center;
     align-items: center;
     color: getColor('text-color-dark');
+    @include tablet {
+      max-width: 172px;
+    }
   }
 
   &__btn {
