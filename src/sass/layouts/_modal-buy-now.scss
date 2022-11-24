@@ -40,7 +40,8 @@
 .buy-now-modal__item {
   position: relative;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   width: 132px;
   height: 136px;
   font-weight: 700;
@@ -57,12 +58,12 @@
     display: block;
     width: 132px;
     height: 132px;
-    // background-image: url();
+    background-image: url(./images/modal-buy/ice-coffee-mb.png);
   }
 }
 .buy-now-modal__product-title {
-padding-bottom: 20px;
-margin-top: auto;
+  padding-bottom: 20px;
+  margin-top: auto;
 }
 
 .buy-now-modal__form {
