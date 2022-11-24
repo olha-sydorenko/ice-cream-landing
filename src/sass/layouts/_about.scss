@@ -8,18 +8,18 @@
     @media screen and (min-width: 320px) and (max-width: 767px) {
       width: 279px;
       height: 278px;
-      top: 22px;
+      top: 32px;
     }
     @media screen and (min-width: 768px) {
       width: 336px;
       height: 330px;
-      top: 26px;
+      top: 36px;
     }
 
     @media screen and (min-width: 1200px) {
       width: 490px;
       height: 490px;
-      top: 39px;
+      top: 49px;
     }
   }
 
@@ -29,16 +29,17 @@
 
   &__additional-img {
     margin: 0 auto;
-    padding-left: 10px;
-
     @media screen and (min-width: 320px) and (max-width: 767px) {
       width: 279px;
+      padding-left: 10px;
     }
     @media screen and (min-width: 768px) and (max-width: 1199px) {
       width: 336px;
+      padding-left: 10px;
     }
     @media screen and (min-width: 1200px) {
-      width: 500px;
+      width: 520px;
+      padding-right: 10px;
     }
   }
 
@@ -71,17 +72,18 @@
 
   &__txt-item {
     @media screen and (min-width: 320px) and (max-width: 767px) {
-    text-align: center;
+      text-align: center;
     }
   }
 
   &__wrapper {
-        align-items: center;
-        justify-content: center;
+    align-items: center;
+    justify-content: center;
+
     @media screen and (min-width: 320px) and (max-width: 767px) {
       display: flex;
       flex-direction: column;
-      gap: 40px;
+      gap: 60px;
       align-items: center;
       justify-content: center;
     }
@@ -123,37 +125,52 @@
     gap: 4px;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
+
+    transition-property: background-color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
     @media screen and (min-width: 320px) and (max-width: 767px) {
       display: block;
       margin: 0 auto;
     }
-  }
 
-  &__heading {
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-      font-size: 30px;
-      font-weight: 400;
-      line-height: 1.26;
-      letter-spacing: 0.04em;
-      margin-bottom: 32px;
+    &:hover,
+    &:focus {
+      background-color: #0a8817;
+      cursor: pointer;
+    }
+    &:focus {
+      color: #ffffff;
+      cursor: pointer;
+      fill: #ffffff;
+    }
+
+    &__heading {
+      @media screen and (min-width: 320px) and (max-width: 767px) {
+        font-size: 30px;
+        font-weight: 400;
+        line-height: 1.26;
+        letter-spacing: 0.04em;
+        margin-bottom: 32px;
+      }
     }
   }
+}
+.section__title {
+  display: block;
+  text-align: center;
 
-  .section__title {
-    display: block;
-    text-align: center;
+  @media screen and (min-width: 320px) and (max-width: 767px) {
+    margin-bottom: 32px;
+  }
 
-    @media screen and (min-width: 320px) and (max-width: 767px) {
-      margin-bottom: 32px;
-    }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 72px;
+  }
 
-    @media screen and (min-width: 768px) {
-      margin-bottom: 72px;
-    }
-
-    @media screen and (min-width: 1200px) {
-      margin-bottom: 82px;
-    }
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 82px;
   }
 }
