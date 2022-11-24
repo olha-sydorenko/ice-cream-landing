@@ -3,8 +3,6 @@
   max-width: 460px;
 
   &__description {
-    display: block;
-    margin: 0 auto;
     color: getColor('text-color-dark');
     text-align: center;
   }
@@ -20,7 +18,6 @@
     flex-direction: column;
     gap: 168px;
     align-items: center;
-    list-style: none;
   }
 
   &__item {
@@ -35,12 +32,15 @@
     justify-content: space-between;
     align-items: center;
     position: relative;
-    background-color: #efd478;
     border-radius: 24px;
+
     &::before {
-      content: url('/src/images/products/ice-coffee-mb.png');
+      content: '';
       width: 241px;
       height: 241px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
       position: absolute;
       top: 0;
       left: 50%;
@@ -50,28 +50,30 @@
     &:first-child {
       background-color: #aec6a5;
       &::before {
-        content: url('/src/images/products/ice-cream-mb.png');
-        width: 241px;
-        height: 241px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        background-image: url('../images/products/ice-cream-mb.png');
+
+        @include retina {
+          background-image: url('../images/products/ice-cream-mb@2x.png');
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      background-color: #efd478;
+      &::before {
+        background-image: url('../images/products/ice-coffee-mb.png');
+        @include retina {
+          background-image: url('../images/products/ice-coffee-mb@2x.png');
+        }
       }
     }
 
     &:last-child {
       background-color: #d6936d;
       &::before {
-        content: url('/src/images/products/milkshakes-mb-min.png');
-        width: 241px;
-        height: 241px;
-        position: absolute;
-        top: 0;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        background-image: url('../images/products/milkshakes-mb-min.png');
         @include retina {
-          content: url('/src/images/products/milkshakes-mb@2x.png');
+          background-image: url('../images/products/milkshakes-mb@2x-min.png');
         }
       }
     }
