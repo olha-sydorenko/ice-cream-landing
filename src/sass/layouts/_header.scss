@@ -6,9 +6,6 @@
   text-align: center;
   justify-content: space-between;
   align-items: center;
-  & .container{
-    position: relative;
-  }
 }
 
 .is-hidden {
@@ -19,6 +16,13 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transform: scale(1.5);
+}
+
+.header-logo-link {
+  top: 12px;
+  left: 15px;
+  position: absolute;
+  z-index: 1;
 }
 
 .mob-header-menu {
@@ -75,9 +79,13 @@
   text-align: center;
   justify-content: center;
   border: none;
-
-  &:after {
-    content: ">";
+  &::after {
+      content: "";
+      display: flex;
+      background-image: url("../images/header/ep_arrow-right-bold.svg");
+      width: 12px;
+      height: 12px;
+      background-repeat: no-repeat;
     margin-left: 4px;
   }
 }
