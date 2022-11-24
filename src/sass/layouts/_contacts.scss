@@ -162,8 +162,10 @@
 .contact-button {
   width: 196px;
   height: 42px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
   border-radius: 10px;
   background-color: getColor('accent-color');
   border: transparent;
