@@ -57,6 +57,7 @@
 }
 
 .contacts__address-link {
+  display: block;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.83;
@@ -65,7 +66,8 @@
 
   color: #d6936d;
 
-  @include tablet {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    min-height: 109px;
     font-size: 14px;
   }
 
@@ -161,8 +163,10 @@
 .contact-button {
   width: 196px;
   height: 42px;
-  padding-top: 12px;
-  padding-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  justify-content: center;
   border-radius: 10px;
   background-color: getColor('accent-color');
   border: transparent;
