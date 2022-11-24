@@ -16,23 +16,6 @@
   width: 100%;
   padding: 35px 39px 35px 39px;
 
-<<<<<<< Updated upstream
-  @include tablet {
-    padding-top: 28px;
-    padding-bottom: 28px;
-    height: 138px;
-    font-size: 14px;
-  }
-}
-
-.responce-text {
-  font-size: 12px;
-  line-height: 2.55;
-  text-align: center;
-  color: #fcfcfc;
-
-=======
->>>>>>> Stashed changes
   @include tablet {
     padding-top: 28px;
     padding-bottom: 28px;
@@ -41,7 +24,6 @@
   }
 }
 .responce-text {
-
   font-size: 12px;
   line-height: 2.55;
   text-align: center;
