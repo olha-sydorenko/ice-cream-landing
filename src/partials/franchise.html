@@ -1,0 +1,55 @@
+<div class="backdrop is-hidden" data-franchise>
+  <div class="franchise">
+    <button type="button" class="franchise-close-btn" data-franchise-close>
+      <svg>
+        <use href="./images/icons.svg#icon-modal-close"></use>
+      </svg>
+    </button>
+
+    <p class="franchise-title">
+      Thank you for your interest in owning an Ice Cream shop
+    </p>
+    <p class="franchise-description">
+      Due to the overwhelming volume of franchise requests we are not accepting
+      new franchisee applications at this time. Once the application process
+      resumes, we will contact you for further information. Please fill out the
+      contact information below and we will reach out for additional
+      information. We appreciate your patience.
+    </p>
+    <form class="franchise-form">
+      <input
+        type="text"
+        class="franchise-input"
+        name="user-name"
+        placeholder="Name"
+        minlength="2"
+        required
+      />
+
+      <input
+        type="text"
+        class="franchise-input"
+        name="user-phone"
+        placeholder="Phone"
+        minlength="2"
+        required
+      />
+      <input
+        type="email"
+        class="franchise-input"
+        name="user-email"
+        placeholder="Email"
+        minlength="2"
+        required
+      />
+
+      <textarea
+        name="user-comment"
+        id="user-comment"
+        class="franchise-text"
+        placeholder="Coment"
+      ></textarea>
+      <button type="submit" class="btn btn--fill franchise-submit-btn">Submit</button>
+    </form>
+  </div>
+</div>
