@@ -1,0 +1,114 @@
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: transparent;
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.two-swipers {
+  background-image: url('../images/bg/gallery-bg-ds@2x.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.responce-photo {
+  width: 85px;
+  height: 85px;
+}
+
+.review__box {
+  background-color: #84a178;
+  border-radius: 10px;
+  width: 100%;
+  padding: 35px 39px 35px 39px;
+
+  @include tablet {
+    padding-top: 28px;
+    padding-bottom: 28px;
+    height: 138px;
+  }
+}
+.responce-text {
+  font-size: 12px;
+  line-height: 2.55;
+  text-align: center;
+  color: #fcfcfc;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  @include desktop {
+    font-size: 16px;
+  }
+}
+
+.responce-name {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.86;
+
+  text-align: center;
+
+  color: #131313;
+  padding-bottom: 12px;
+}
+
+.mySwipertwo > .swiper-wrapper > .swiper-slide {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex-direction: column;
+  background: transparent;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.swiper-pagination-bullet-active,
+.swiper-pagination-bullet {
+  background-color: #84a178;
+  width: 12px;
+  height: 12px;
+}
+
+.swiper-pagination-horizontal.swiper-pagination-bullets
+  .swiper-pagination-bullet {
+  margin: 0 9px;
+}
+.swiper-button-next,
+.swiper-button-prev {
+  color: #84a178;
+}
+
+.gallery__image {
+  width: 280px;
+  height: 130px;
+  border-radius: 8px;
+  @include tablet {
+    width: 704px;
+    height: 327px;
+  }
+  @include desktop {
+    width: 1013px;
+    height: 422px;
+  }
+}
