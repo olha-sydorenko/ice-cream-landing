@@ -167,16 +167,6 @@
   align-items: center;
   gap: 4px;
   justify-content: center;
-  border-radius: 10px;
-  background-color: getColor('accent-color');
-  border: transparent;
-  &:hover {
-    background-color: #0a8817;
-  }
-  &:focus {
-    color: #ffffff;
-    background-color: #0a8817;
-  }
 }
 
 .icon-contacts {

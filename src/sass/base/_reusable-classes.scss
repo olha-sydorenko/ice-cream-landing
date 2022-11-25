@@ -77,12 +77,36 @@
   line-height: 1.28;
   color: getColor('text-color-dark');
   border-radius: 10px;
+  outline: transparent;
+  transition: color $time-hover $time-function,
+    background-color $time-hover $time-function,
+    border-color $time-hover $time-function;
 }
 
 .btn--fill {
+  border: transparent;
   background-color: getColor('accent-color');
+
+  &:hover,
+  &:focus {
+    background-color: getColor('button-active-color');
+  }
+
+  &:focus {
+    color: getColor('text-color-light');
+  }
 }
 
 .btn--bordered {
+  background-color: transparent;
   border: 2px solid getColor('accent-color');
+
+  &:hover,
+  &:focus {
+    border-color: getColor('button-active-color');
+  }
+
+  &:focus {
+    color: getColor('text-color-light');
+  }
 }
