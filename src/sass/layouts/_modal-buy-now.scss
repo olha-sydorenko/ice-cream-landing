@@ -17,7 +17,8 @@
   border: 2px solid getColor('accent-color');
   border-radius: 10px;
   overflow: auto;
-  transition: transform $time-hover $time-function;
+  transition: transform $time-hover $time-function,
+    opacity $time-hover $time-function;
 
   @include tablet {
     position: absolute;
