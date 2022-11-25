@@ -7,7 +7,7 @@
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 300ms linear, visibility 300ms linear;
 }
-.backdrop.is-hidden .modal {
+.backdrop.is-hidden .franchise {
   transform: translate(-50%, 100%) scale(5) rotate(120deg);
 }
 .is-hidden {
@@ -19,8 +19,7 @@
   overflow: hidden;
 }
 
-.modal {
-  //   width: 90%;
+.franchise {
   width: 280px;
   min-height: 674px;
 
@@ -42,8 +41,6 @@
     height: 668px;
     padding: 32px 60px;
   }
-
-  //   ????? z-index?????
 }
 
 .franchise-form {
@@ -51,11 +48,10 @@
   flex-direction: column;
   gap: 12px;
   margin-top: 24px;
-  margin-bottom: 24px;
+
   @include tablet {
     gap: 16px;
     margin-top: 32px;
-    margin-bottom: 32px;
   }
 }
 
@@ -110,8 +106,8 @@
   }
 }
 
-.modal-input,
-.modal-text {
+.franchise-input,
+.franchise-text {
   width: 100%;
   height: 40px;
   background: rgba(248, 210, 78, 0.1);
@@ -147,7 +143,7 @@
   }
 }
 
-.modal-text {
+.franchise-text {
   height: 64px;
   @include tablet {
     height: 84px;
@@ -176,6 +172,7 @@
   border: none;
 
   margin: 0 auto;
+  margin-top: 8px;
   &:hover {
     background-color: #0a8817;
   }
@@ -184,6 +181,7 @@
     background-color: #0a8817;
   }
   @include tablet {
+    margin-top: 16px;
     width: 121px;
     height: 42px;
     font-size: 14px;
