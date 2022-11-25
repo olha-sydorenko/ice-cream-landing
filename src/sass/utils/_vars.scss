@@ -3,6 +3,7 @@ $color: (
 'text-color-dark': #131313,
 'accent-color': #F8D24E,
 'background-color': #84A178,
+'button-active-color':  #0a8817,
 );
 
 @function getColor($key) {

@@ -14,6 +14,7 @@
   }
 
   @include desktop {
+    padding-top: 60px;
     padding-bottom: 60px;
   }
 }
@@ -166,5 +167,10 @@
 
   @include tablet {
     max-width: none;
+  }
+
+  @include desktop {
+    font-size: 12px;
+    line-height: 1.86;
   }
 }
