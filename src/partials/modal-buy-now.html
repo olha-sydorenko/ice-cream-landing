@@ -1,6 +1,6 @@
-<div class="backdrop">
+<div class="backdrop" data-modal>
   <div class="buy-now-modal modal">
-    <button type="button" class="modal__close-btn">
+    <button type="button" class="modal__close-btn" data-modal-close>
       <svg width="20" height="20">
         <use href="./images/icons.svg#icon-modal-close"></use>
       </svg>
@@ -20,7 +20,7 @@
     <form class="buy-now-modal__form form">
       <label class="form__label">
         <input
-          class="form__input"
+          class="form__input buy-now-modal__input"
           type="text"
           name="user-name"
           placeholder="Name"
@@ -29,7 +29,7 @@
       </label>
       <label class="form__label">
         <input
-          class="form__input"
+          class="form__input buy-now-modal__input"
           type="tel"
           name="user-phone-number"
           placeholder="Phone"
@@ -38,12 +38,12 @@
       </label>
       <label class="form__label">
         <textarea
-          class="form__textarea"
+          class="form__textarea buy-now-modal__input"
           name="commentary"
           placeholder="Comment"
         ></textarea>
       </label>
-      <button type="submit" class="btn">Submit</button>
+      <button type="submit" class="form__btn btn btn--fill">Submit</button>
     </form>
   </div>
 </div>
