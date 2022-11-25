@@ -35,6 +35,14 @@
   height: 85px;
 }
 
+.reviews__container {
+  position: relative;
+
+  @include desktop {
+    max-width: 968px;
+  }
+}
+
 .review__box {
   background-color: #84a178;
   border-radius: 10px;
@@ -47,18 +55,24 @@
     height: 138px;
   }
 }
+
 .responce-text {
   font-size: 12px;
   line-height: 2.55;
   text-align: center;
-  color: #fcfcfc;
+  color: getColor('text-color-light');
 
   @include tablet {
     font-size: 14px;
   }
 
   @include desktop {
+    margin: 0 auto;
+    font-weight: 500;
     font-size: 16px;
+    line-height: 1.86;
+    letter-spacing: 0.04em;
+    max-width: 788px;
   }
 }
 
