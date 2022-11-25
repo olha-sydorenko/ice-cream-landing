@@ -1,4 +1,5 @@
 .backdrop {
+  z-index: 10;
   position: fixed;
   top: 0;
   width: 100%;
@@ -6,11 +7,22 @@
   background: rgba(0, 0, 0, 0.2);
   transition: opacity 300ms linear, visibility 300ms linear;
 }
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, 100%) scale(5) rotate(120deg);
+}
+.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+.no-scroll {
+  overflow: hidden;
+}
 
 .modal {
-  width: 90%;
+  //   width: 90%;
   width: 280px;
-  height: 674px;
+  min-height: 674px;
 
   background-color: #fcfcfc;
 
@@ -34,19 +46,20 @@
   //   ????? z-index?????
 }
 
-.modal-form {
+.franchise-form {
   display: flex;
   flex-direction: column;
   gap: 12px;
   margin-top: 24px;
   margin-bottom: 24px;
+  @include tablet {
+    gap: 16px;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
 }
 
-.backdrop.is-hidden .modal {
-  transform: translate(-50%, 100%) scale(5) rotate(120deg);
-}
-
-.close-btn {
+.franchise-close-btn {
   position: absolute;
   right: 5px;
   top: 5px;
@@ -65,18 +78,12 @@
   }
 }
 
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
 .franchise-title {
   font-family: 'Seymour One';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  line-height: 1.4;
+  line-height: 1.5;
 
   text-align: center;
 
@@ -84,9 +91,12 @@
 
   margin-bottom: 20px;
   @include tablet {
-    margin-bottom: 24px;
+    margin: 0 auto;
     font-size: 20px;
     line-height: 1.4;
+    max-width: 322px;
+
+    margin-bottom: 24px;
   }
 }
 
@@ -96,6 +106,7 @@
   color: #131313;
   @include tablet {
     font-size: 16px;
+    min-width: 448px;
   }
 }
 
@@ -107,13 +118,13 @@
   border: 1px solid #84a178;
   border-radius: 10px;
   outline: transparent;
-  font-size: 14px;
-  color: #000000;
+  font-size: 12px;
+  color: #131313;
   padding-left: 12px;
   padding-top: 8px;
   padding-bottom: 8px;
   &:focus {
-    border-color: var(--accent-color);
+    border-color: #f8d24e;
   }
   &::placeholder {
     font-weight: 400;
@@ -121,7 +132,7 @@
     line-height: 1.16;
     letter-spacing: 0.01em;
 
-    color: var(--primary-text-color);
+    color: #131313;
   }
   &:not(:placeholder-shown):not(:focus):valid {
     background-color: rgba(159, 245, 159, 0.418);
@@ -129,16 +140,24 @@
   &:not(:placeholder-shown):not(:focus):invalid {
     background-color: rgba(245, 159, 159, 0.418);
   }
+  @include tablet {
+    font-size: 14px;
+    max-width: 368px;
+    margin: 0 auto;
+  }
 }
 
 .modal-text {
   height: 64px;
+  @include tablet {
+    height: 84px;
+  }
 }
 
-.send-btn {
+.franchise-submit-btn {
   font-weight: 600;
-  font-size: 14px;
-  line-height: 1.21;
+  font-size: 12px;
+  line-height: 1.25;
 
   color: #131313;
 
@@ -149,7 +168,7 @@
   justify-content: center;
   align-items: center;
 
-  width: 121px;
+  width: 114px;
   height: 42px;
 
   background: #f8d24e;
@@ -157,4 +176,17 @@
   border: none;
 
   margin: 0 auto;
+  &:hover {
+    background-color: #0a8817;
+  }
+  &:focus {
+    color: #ffffff;
+    background-color: #0a8817;
+  }
+  @include tablet {
+    width: 121px;
+    height: 42px;
+    font-size: 14px;
+    line-height: 1.21;
+  }
 }
