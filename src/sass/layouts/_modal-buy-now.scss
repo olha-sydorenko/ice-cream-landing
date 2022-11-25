@@ -1,22 +1,49 @@
 .backdrop {
   position: fixed;
   z-index: 100;
+  display: flex;
+  justify-content: center;
   width: 100%;
   height: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
   background-color: rgba(0, 0, 0, 0.4);
   opacity: 1;
-  transition: opacity $time-hover $time-function;
+  transition: opacity $time-hover $time-function,
+    visibility $time-hover $time-function;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+
+  @include tablet {
+    padding-block: 0;
+  }
 }
 .buy-now-modal {
-  position: absolute;
-  left: 50%;
-  top: 50%;
+  position: relative;
   width: 280px;
   padding: 28px;
   background-color: #fcfcfc;
   border: 2px solid #f8d24e;
   border-radius: 10px;
-  transform: translate(-50%, -50%);
+  overflow: auto;
+
+  @include tablet {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 568px;
+    padding: 32px 54px;
+  }
+
+  .backdrop.is-hidden & {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
 }
 
 .modal__close-btn {
@@ -24,8 +51,19 @@
   top: 12px;
   right: 12px;
   padding: 0;
+  width: 20px;
+  height: 20px;
   border: none;
   background-color: transparent;
+  outline: transparent;
+  transition: fill $time-hover $time-function,
+    transform $time-hover $time-function;
+
+  &:hover,
+  &:focus {
+    fill: getColor('accent-color');
+    transform: scale(1.4);
+  }
 }
 .buy-now-modal__title {
   margin-bottom: 83px;
@@ -34,6 +72,12 @@
   font-size: 16px;
   line-height: 1.5;
   color: getColor('text-color-dark');
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 103px;
+  }
 }
 .buy-now-modal__list {
   display: flex;
@@ -41,6 +85,12 @@
   align-items: center;
   gap: 83px;
   margin-bottom: 28px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
 }
 
 .buy-now-modal__item {
@@ -57,6 +107,9 @@
   text-transform: uppercase;
   color: getColor('text-color-dark');
   border-radius: 15.7808px;
+
+  @include tablet {
+  }
 
   &::before {
     content: '';
@@ -154,7 +207,12 @@
 }
 
 .buy-now-modal__form {
+  @include tablet {
+    max-width: 368px;
+    margin: 0 auto;
+  }
 }
+
 .buy-now-modal__input {
   width: 100%;
   padding: 8px 12px;
@@ -162,29 +220,40 @@
   border: 1px solid #84a178;
   border-radius: 10px;
   outline: transparent;
+  transition: border-color $time-hover $time-function;
+
+  @include tablet {
+    padding: 11px 16px;
+  }
 
   &::placeholder {
     font-size: 12px;
     line-height: 1.4;
     color: getColor('text-color-dark');
+
+    @include tablet {
+      font-size: 14px;
+    }
   }
 
-  &:hover,
   &:focus {
     border-color: getColor('accent-color');
   }
 }
 .form {
 }
+
 .form__label {
   display: block;
   margin-bottom: 12px;
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
 }
 .form__input {
 }
 .form__textarea {
   height: 65px;
-  margin-bottom: 24px;
   resize: none;
 }
 
@@ -193,4 +262,22 @@
   margin-inline: auto;
   border: none;
   padding: 12px 34px;
+  font-size: 12px;
+  line-height: 1.25;
+  outline: transparent;
+  transition: color $time-hover $time-function,
+    background-color $time-hover $time-function;
+
+  @include tablet {
+    font-size: 14px;
+  }
+
+  &:focus,
+  &:hover {
+    background-color: #0a8817;
+  }
+
+  &:hover {
+    color: getColor('text-color-light');
+  }
 }
