@@ -19,8 +19,6 @@
     @include retina {
       background-image: url(../images/bg/products-bg-ds@2x.png);
     }
-    padding-left: 16px;
-    padding-right: 16px;
   }
 
   &__description {
@@ -31,13 +29,13 @@
   &__title {
     text-align: center;
     margin-top: 12px;
-    margin-bottom: 148px;
+    margin-bottom: 151px;
 
     @include tablet {
       margin-bottom: 200px;
     }
-    @include tablet {
-      margin-bottom: 200px;
+    @include desktop {
+      margin-bottom: 303px;
     }
   }
 
@@ -80,7 +78,6 @@
     @include desktop {
       @include cardWidth(3, 29px);
       height: 536px;
-      width: 360px;
       padding-top: 165px;
       padding-left: 64px;
       padding-right: 64px;
@@ -89,44 +86,75 @@
 
     &::before {
       content: '';
-      width: 241px;
-      height: 241px;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      position: absolute;
+      top: 0px;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      @include tablet {
+        top: -8px;
+        width: 200px;
+        height: 200px;
+      }
+      @include desktop {
+        top: -16px;
+        width: 302px;
+        height: 302px;
+      }
+    }
+
+    &::after {
+      content: '';
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
       background-position: center;
       background-size: cover;
       background-repeat: no-repeat;
       position: absolute;
-      top: 0;
+      top: -11px;
       left: 50%;
       transform: translate(-50%, -50%);
       @include tablet {
+        top: -20px;
         width: 200px;
-        height: 208px;
+        height: 200px;
       }
       @include desktop {
+        top: -32px;
         width: 302px;
-        height: 316px;
+        height: 302px;
       }
     }
 
     &:first-child {
       background-color: #aec6a5;
       &::before {
-        background-image: url(../images/products/ice-cream-mb.png);
+        background: linear-gradient(
+            0deg,
+            rgba(156, 190, 143, 0.7),
+            rgba(156, 190, 143, 0.7)
+          ),
+          #d9d9d9;
+        box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
+      }
+      &::after {
+        background-image: url(../images/products/ice-mb-min.png);
         @include retina {
-          background-image: url(../images/products/ice-cream-mb@2x.png);
+          background-image: url(../images/products/ice-mb@2x-min.png);
         }
-
         @include tablet {
-          background-image: url(../images/products/ice-cream-tb.png);
+          background-image: url(../images/products/ice-tb-min.png);
           @include retina {
-            background-image: url(../images/products/ice-cream-tb@2x.png);
+            background-image: url(../images/products/ice-tb@2x-min.png);
           }
         }
-
         @include desktop {
-          background-image: url(../images/products/ice-cream-ds.png);
+          background-image: url(../images/products/ice-ds-min.png);
           @include retina {
-            background-image: url(../images/products/ice-cream-ds@2x.png);
+            background-image: url(../images/products/ice-ds@2x-min.png);
           }
         }
       }
@@ -135,20 +163,29 @@
     &:nth-child(2) {
       background-color: #efd478;
       &::before {
-        background-image: url(../images/products/ice-coffee-mb.png);
+        background: linear-gradient(
+            0deg,
+            rgba(248, 210, 78, 0.7),
+            rgba(248, 210, 78, 0.7)
+          ),
+          #d9d9d9;
+        box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
+      }
+      &::after {
+        background-image: url(../images/products/coffee-mb.png);
         @include retina {
-          background-image: url(../images/products/ice-coffee-mb@2x.png);
+          background-image: url(../images/products/coffee-mb@2x-min.png);
         }
         @include tablet {
-          background-image: url(../images/products/ice-coffee-tb.png);
+          background-image: url(../images/products/coffee-tb-min.png);
           @include retina {
-            background-image: url(../images/products/ice-coffee-tb@2x.png);
+            background-image: url(../images/products/coffee-tb@2x-min.png);
           }
         }
         @include desktop {
-          background-image: url(../images/products/ice-coffee-ds.png);
+          background-image: url(../images/products/coffee-ds-min.png);
           @include retina {
-            background-image: url(../images/products/ice-coffee-ds@2x.png);
+            background-image: url(../images/products/coffee-ds@2x-min.png);
           }
         }
       }
@@ -157,21 +194,30 @@
     &:last-child {
       background-color: #d6936d;
       &::before {
-        background-image: url('../images/products/milkshakes-mb-min.png');
-        @include retina {
-          background-image: url('../images/products/milkshakes-mb@2x-min.png');
-        }
+        background: linear-gradient(
+            0deg,
+            rgba(213, 117, 63, 0.7),
+            rgba(213, 117, 63, 0.7)
+          ),
+          #d9d9d9;
 
+        box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
+      }
+      &::after {
+        background-image: url(../images/products/milk-mb-min.png);
+        @include retina {
+          background-image: url(../images/products/milk-mb@2x-min.png);
+        }
         @include tablet {
-          background-image: url(../images/products/milkshakes-tb.png);
+          background-image: url(../images/products/milk-tb-min.png);
           @include retina {
-            background-image: url(../images/products/milkshakes-tb@2x.png);
+            background-image: url(../images/products/milk-tb@2x-min.png);
           }
         }
         @include desktop {
-          background-image: url(../images/products/milkshakes-ds.png);
+          background-image: url(../images/products/milk-ds-min.png);
           @include retina {
-            background-image: url(../images/products/milkshakes-ds@2x.png);
+            background-image: url(../images/products/milk-ds@2x-min.png);
           }
         }
       }
@@ -218,8 +264,14 @@
       width: 172px;
     }
     @include desktop {
-      width: 246px;
       font-size: 16px;
+
+      &:first-child {
+        width: 246px;
+      }
+      &:not(:first-child) {
+        width: 242px;
+      }
     }
   }
 
