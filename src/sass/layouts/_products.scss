@@ -283,5 +283,19 @@
     fill: #131313;
     background-color: transparent;
     border: none;
+    &:hover {
+      animation: pulse 2s linear;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }
