@@ -1,26 +1,36 @@
 .products {
-  background-image: url(../images/bg/products-bg-mb.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  @include retina {
-    background-image: url(../images/bg/products-bg-mb@2x.png);
-  }
+  position: relative;
 
-  @include tablet {
-    background-image: url(../images/bg/products-bg-tb.png);
+  &::before {
+    content: '';
+    background-image: url(../images/bg/products-bg-mb.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
     @include retina {
-      background-image: url(../images/bg/products-bg-tb@2x.png);
+      background-image: url(../images/bg/products-bg-mb@2x.png);
+    }
+
+    @include tablet {
+      background-image: url(../images/bg/products-bg-tb.png);
+      @include retina {
+        background-image: url(../images/bg/products-bg-tb@2x.png);
+      }
+    }
+
+    @include desktop {
+      background-image: url(../images/bg/products-bg-ds.png);
+      @include retina {
+        background-image: url(../images/bg/products-bg-ds@2x.png);
+      }
     }
   }
-
-  @include desktop {
-    background-image: url(../images/bg/products-bg-ds.png);
-    @include retina {
-      background-image: url(../images/bg/products-bg-ds@2x.png);
-    }
-  }
-
   &__description {
     color: getColor('text-color-dark');
     text-align: center;
