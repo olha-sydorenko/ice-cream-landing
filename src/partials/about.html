@@ -5,8 +5,7 @@
     <p class="section__description about__pre-heading">Tradition and love</p>
     <h2 class="section__title adout__heading">How it’s made?</h2>
     <div class="about__wrapper">
-      <div class="about__img-wrap"></div>
-      <picture>
+      <picture class="about__img-cover">
         <source
           srcset="
             ./images/about-img-desktop-1x.jpg 1x,
@@ -28,18 +27,20 @@
           "
           media="min-width: 480px"
         />
-        <img
-          srcset="
-            ./images/about-img-desktop-1x.jpg 1x,
-            ./images/about-img-desktop-2x.jpg 2x
-          "
-          src="./images/about-img-desktop-1x.jpg"
-          class="about__img"
-          width="490"
-          height="490"
-          alt="A cow in a meadow"
-        />
+        <div class="about__img-wrap">
+          <img
+            class="about__main-img"
+            srcset="
+              ./images/about-img-desktop-1x.jpg 1x,
+              ./images/about-img-desktop-2x.jpg 2x
+            "
+            src="./images/about-img-desktop-1x.jpg"
+            class="about__img"
+            alt="A cow in a meadow"
+          />
+        </div>
       </picture>
+
       <div class="about__info">
         <div class="about__txt-wrap">
           <p class="about__txt-item about__txt-item--first">
