@@ -32,10 +32,10 @@
     margin-bottom: 151px;
 
     @include tablet {
-      margin-bottom: 190px;
+      margin-bottom: 200px;
     }
-    @include tablet {
-      margin-bottom: 286px;
+    @include desktop {
+      margin-bottom: 303px;
     }
   }
 
@@ -94,14 +94,14 @@
       left: 50%;
       transform: translate(-50%, -50%);
       @include tablet {
-        top: -10px;
+        top: -8px;
         width: 200px;
-        height: 197px;
+        height: 200px;
       }
       @include desktop {
         top: -16px;
         width: 302px;
-        height: 300px;
+        height: 302px;
       }
     }
 
@@ -118,14 +118,14 @@
       left: 50%;
       transform: translate(-50%, -50%);
       @include tablet {
-        top: -22px;
+        top: -20px;
         width: 200px;
-        height: 197px;
+        height: 200px;
       }
       @include desktop {
         top: -32px;
         width: 302px;
-        height: 300px;
+        height: 302px;
       }
     }
 
