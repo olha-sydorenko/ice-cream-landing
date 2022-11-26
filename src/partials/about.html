@@ -1,4 +1,5 @@
 <!-- About Section -->
+
 <section class="section about">
   <div class="container">
     <p class="section__description about__pre-heading">Tradition and love</p>
@@ -40,23 +41,59 @@
         />
       </picture>
       <div class="about__info">
-        <p class="about__txt">
-          Ice is a place where you will become not only a little happier, but
-          also healthier. Health is the main value for us, and we follow it when
-          creating our handmade desserts.
-        </p>
-        <p class="about__txt">
-          We use traditional recipes and 100% natural ingredients. Our products
-          are so natural that they can be given to children from the age of
-          three years. Sweets lovers can expect 55 types of ice cream, 15 types
-          of coffee and 23 milkshakes.
-        </p>
-        <p class="about__txt">
-          This is enough to choose ice cream and coffee for any mood!
-        </p>
-        <button type="button" class="btn btn--fill">Read more</button>
+        <div class="about__txt-wrap">
+          <p class="about__txt-item about__txt-item--first">
+            Ice is a place where you will become not only a little happier, but
+            also healthier. Health is the main value for us, and we follow it
+            when creating our handmade desserts.
+          </p>
+          <p class="about__txt-item about__txt-item--second">
+            We use traditional recipes and 100% natural ingredients. Our
+            products are so natural that they can be given to children from the
+            age of three years. Sweets lovers can expect 55 types of ice cream,
+            15 types of coffee and 23 milkshakes.
+          </p>
+          <p class="about__txt-item about__txt-item--last">
+            This is enough to choose ice cream and coffee for any mood!
+          </p>
+        </div>
+        <button type="button" class="btn btn--fill about__btn">
+          Read more
+          <svg width="12" height="12">
+            <use href="./images/icons.svg#icon-arrow-right-bold"></use>
+          </svg>
+        </button>
       </div>
     </div>
   </div>
 </section>
 <!-- End About Section -->
+
+<!-- Modal Read More -->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <form class=".js-speaker-form" action="data">
+      <h2 class="modal-heading">How it’s made?</h2>
+      <video
+        class="modal__read-more-video"
+        src="http://techslides.com/demos/sample-videos/small.webm"
+        poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
+        width="448"
+        height="205"
+        controls
+        preload="auto"
+      ></video>
+      <p class="modal__read-more-txt">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      </p>
+    </form>
+
+    <button type="button" class="close-btn-modal" data-modal-close>
+      <svg class="close-modal-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-modal-close"></use>
+      </svg>
+    </button>
+  </div>
+</div>
