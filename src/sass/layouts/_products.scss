@@ -1,23 +1,34 @@
 .products {
-  background-image: url(../images/bg/products-bg-mb.png);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  @include retina {
-    background-image: url(../images/bg/products-bg-mb@2x.png);
-  }
+  position: relative;
 
-  @include tablet {
-    background-image: url(../images/bg/products-bg-tb.png);
+  &::before {
+    content: '';
+    background-image: url(../images/bg/products-bg-mb.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0.5;
     @include retina {
-      background-image: url(../images/bg/products-bg-tb@2x.png);
+      background-image: url(../images/bg/products-bg-mb@2x.png);
     }
-  }
 
-  @include desktop {
-    background-image: url(../images/bg/products-bg-ds.png);
-    @include retina {
-      background-image: url(../images/bg/products-bg-ds@2x.png);
+    @include tablet {
+      background-image: url(../images/bg/products-bg-tb.png);
+      @include retina {
+        background-image: url(../images/bg/products-bg-tb@2x.png);
+      }
+    }
+
+    @include desktop {
+      background-image: url(../images/bg/products-bg-ds.png);
+      @include retina {
+        background-image: url(../images/bg/products-bg-ds@2x.png);
+      }
     }
   }
 
@@ -67,6 +78,7 @@
     align-items: center;
     position: relative;
     border-radius: 24px;
+
     @include tablet {
       @include cardWidth(3, 16px);
       height: 428px;
@@ -75,6 +87,7 @@
       padding-right: 26px;
       padding-bottom: 12px;
     }
+
     @include desktop {
       @include cardWidth(3, 29px);
       height: 536px;
@@ -93,11 +106,13 @@
       top: 0px;
       left: 50%;
       transform: translate(-50%, -50%);
+
       @include tablet {
         top: -8px;
         width: 200px;
         height: 200px;
       }
+
       @include desktop {
         top: -16px;
         width: 302px;
@@ -117,11 +132,13 @@
       top: -11px;
       left: 50%;
       transform: translate(-50%, -50%);
+
       @include tablet {
         top: -20px;
         width: 200px;
         height: 200px;
       }
+
       @include desktop {
         top: -32px;
         width: 302px;
@@ -131,6 +148,7 @@
 
     &:first-child {
       background-color: #aec6a5;
+
       &::before {
         background: linear-gradient(
             0deg,
@@ -140,19 +158,25 @@
           #d9d9d9;
         box-shadow: 0px 5.34219px 20.0332px rgba(10, 136, 23, 0.25);
       }
+
       &::after {
         background-image: url(../images/products/ice-mb-min.png);
+        
         @include retina {
           background-image: url(../images/products/ice-mb@2x-min.png);
         }
+
         @include tablet {
           background-image: url(../images/products/ice-tb-min.png);
+
           @include retina {
             background-image: url(../images/products/ice-tb@2x-min.png);
           }
         }
+
         @include desktop {
           background-image: url(../images/products/ice-ds-min.png);
+
           @include retina {
             background-image: url(../images/products/ice-ds@2x-min.png);
           }
@@ -162,6 +186,7 @@
 
     &:nth-child(2) {
       background-color: #efd478;
+
       &::before {
         background: linear-gradient(
             0deg,
@@ -171,19 +196,25 @@
           #d9d9d9;
         box-shadow: 0px 5.40397px 20.2649px rgba(153, 114, 23, 0.25);
       }
+
       &::after {
         background-image: url(../images/products/coffee-mb.png);
+
         @include retina {
           background-image: url(../images/products/coffee-mb@2x-min.png);
         }
+
         @include tablet {
           background-image: url(../images/products/coffee-tb-min.png);
+
           @include retina {
             background-image: url(../images/products/coffee-tb@2x-min.png);
           }
         }
+
         @include desktop {
           background-image: url(../images/products/coffee-ds-min.png);
+
           @include retina {
             background-image: url(../images/products/coffee-ds@2x-min.png);
           }
@@ -193,6 +224,7 @@
 
     &:last-child {
       background-color: #d6936d;
+
       &::before {
         background: linear-gradient(
             0deg,
@@ -203,19 +235,25 @@
 
         box-shadow: 0px 5.41333px 20.3px rgba(0, 0, 0, 0.25);
       }
+
       &::after {
         background-image: url(../images/products/milk-mb-min.png);
+
         @include retina {
           background-image: url(../images/products/milk-mb@2x-min.png);
         }
+
         @include tablet {
           background-image: url(../images/products/milk-tb-min.png);
+
           @include retina {
             background-image: url(../images/products/milk-tb@2x-min.png);
           }
         }
+
         @include desktop {
           background-image: url(../images/products/milk-ds-min.png);
+
           @include retina {
             background-image: url(../images/products/milk-ds@2x-min.png);
           }
@@ -226,6 +264,7 @@
 
   &__wrap {
     max-width: 230px;
+
     @include tablet {
       max-width: 339px;
     }
@@ -243,9 +282,11 @@
     text-align: center;
     color: getColor('text-color-dark');
     text-transform: uppercase;
+
     @include tablet {
       font-size: 20px;
     }
+
     @include desktop {
       margin-bottom: 66px;
       font-size: 30px;
@@ -260,18 +301,14 @@
     text-align: center;
     align-items: center;
     color: getColor('text-color-dark');
+
     @include tablet {
       width: 172px;
     }
+
     @include desktop {
       font-size: 16px;
-
-      &:first-child {
-        width: 246px;
-      }
-      &:not(:first-child) {
-        width: 242px;
-      }
+      width: 242px;
     }
   }
 
@@ -283,5 +320,23 @@
     fill: #131313;
     background-color: transparent;
     border: none;
+    outline: transparent;
+
+    &:hover,
+    &:focus {
+      fill: #fcfcfc;
+      animation: pulse 2s infinite linear;
+    }
+  }
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.2);
+    }
+    100% {
+      transform: scale(1);
+    }
   }
 }
