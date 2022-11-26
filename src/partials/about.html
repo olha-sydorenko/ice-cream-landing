@@ -68,3 +68,32 @@
   </div>
 </section>
 <!-- End About Section -->
+
+<!-- Modal Read More -->
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <form class=".js-speaker-form" action="data">
+      <h2 class="modal-heading">How it’s made?</h2>
+      <video
+        class="modal__read-more-video"
+        src="http://techslides.com/demos/sample-videos/small.webm"
+        poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
+        width="448"
+        height="205"
+        controls
+        preload="auto"
+      ></video>
+      <p class="modal__read-more-txt">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+        tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
+        adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+      </p>
+    </form>
+
+    <button type="button" class="close-btn-modal" data-modal-close>
+      <svg class="close-modal-icon" width="24" height="24">
+        <use href="./images/icons.svg#icon-modal-close"></use>
+      </svg>
+    </button>
+  </div>
+</div>
