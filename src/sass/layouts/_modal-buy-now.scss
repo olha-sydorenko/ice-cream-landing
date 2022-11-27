@@ -46,16 +46,28 @@
   padding: 0;
   width: 20px;
   height: 20px;
-  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  border-radius: 50%;
   background-color: transparent;
   outline: transparent;
   transition: fill $time-hover $time-function,
-    transform $time-hover $time-function;
+  border-color $time-hover $time-function;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
 
   &:hover,
   &:focus {
     fill: getColor('accent-color');
-    transform: scale(1.4);
+  }
+
+  &:focus {
+    border-color: getColor('accent-color');
   }
 }
 
@@ -102,9 +114,6 @@
   text-transform: uppercase;
   color: getColor('text-color-dark');
   border-radius: 15.7808px;
-
-  @include tablet {
-  }
 
   &::before {
     content: '';
