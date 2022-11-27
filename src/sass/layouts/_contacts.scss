@@ -1,11 +1,26 @@
 .contacts {
   background-color: getColor('background-color');
 }
+
+.contacts__container {
+  position: relative;
+  z-index: 1;
+  margin-top: -418px;
+
+  @include tablet {
+    margin-top: -365px;
+  }
+
+  @include desktop {
+    margin-top: -188px;
+  }
+}
+
 .contacts__list {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
-  
+
   @include tablet {
     flex-wrap: nowrap;
   }
@@ -17,11 +32,10 @@
 .contacts__item {
   padding: 40px 32px 24px 32px;
   background-color: getColor('text-color-light');
-
   box-shadow: 0px 8px 30px rgba(212, 20, 67, 0.1);
   border-radius: 24px;
-
   width: 100%;
+
   @include tablet {
     width: calc((100% - 32px) / 3);
     padding: 40px 24px 32px 24px;
@@ -34,19 +48,18 @@
 }
 
 .contacts__category {
-  // font-family: 'Montserrat';
-  // font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
-
   letter-spacing: 0.04em;
-
-  color: #131313;
-  padding: 5px 23px;
+  color: getColor('text-color-dark');
+  padding: 3px 23px;
   background-color: getColor('accent-color');
   border-radius: 4px;
+
   @include tablet {
+    padding-top: 6px;
+    padding-bottom: 6px;
     font-size: 16px;
   }
 }
@@ -54,6 +67,11 @@
 .contacts__address {
   padding-top: 20px;
   padding-bottom: 24px;
+
+  @include tablet {
+    padding-top: 32px;
+    padding-bottom: 32px;
+  }
 }
 
 .contacts__address-link {
@@ -61,12 +79,10 @@
   font-weight: 500;
   font-size: 12px;
   line-height: 1.83;
-
   letter-spacing: 0.04em;
-
   color: #d6936d;
 
-  @media screen and (min-width: 768px) and (max-width: 1199px) {
+  @include tablet {
     min-height: 109px;
     font-size: 14px;
   }
@@ -77,28 +93,27 @@
 }
 
 .city {
-  // font-family: 'Montserrat';
-  // font-style: normal;
-  // font-weight: 500;
+  font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
   letter-spacing: 0.04em;
-
   color: getColor('text-color-dark');
-
   padding-bottom: 8px;
+
   @include tablet {
+    padding-bottom: 12px;
     font-size: 14px;
   }
 
   @include desktop {
+    padding-bottom: 8px;
     font-size: 16px;
   }
 }
 
 .contacts-shedule__list {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  padding-top: 23px;
+  padding-bottom: 23px;
 
   border-top-width: 1px;
   border-top-style: solid;
@@ -112,37 +127,53 @@
   flex-wrap: nowrap;
   flex-direction: column;
   gap: 8px;
+
+  @include tablet {
+    padding-top: 31px;
+    padding-bottom: 31px;
+  }
 }
 
 .days {
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
+  color: getColor('text-color-dark');
 
-  color: #131313;
+  @include tablet {
+    font-size: 14px;
+  }
 }
+
 .hours {
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.86;
 
   color: #ababab;
+
+  @include tablet {
+    font-size: 14px;
+  }
 }
+
 .contacts-telmail {
   padding-top: 24px;
+
+  @include tablet {
+    padding-top: 32px;
+  }
 }
+
 .contacts-telmail__link {
-  font-family: 'Montserrat';
-  font-style: normal;
   font-weight: 500;
   font-size: 12px;
   line-height: 1.83;
+  color: getColor('text-color-dark');
 
-  color: #131313;
+  @include tablet {
+    font-size: 14px;
+  }
 }
 
 .contact-button-list {
@@ -152,6 +183,7 @@
   flex-direction: column;
   align-items: center;
   gap: 16px;
+
   @include tablet {
     flex-wrap: nowrap;
     flex-direction: row;
