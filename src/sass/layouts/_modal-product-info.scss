@@ -11,6 +11,7 @@
 .product-info-modal {
   position: relative;
   width: 280px;
+  max-height: 100%;
   padding: 28px 20px;
   background-color: #fcfcfc;
   border: 2px solid getColor('accent-color');
@@ -31,6 +32,10 @@
   .backdrop.is-hidden & {
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.2);
+  }
+
+    &::-webkit-scrollbar {
+    width: 5px;
   }
 }
 
