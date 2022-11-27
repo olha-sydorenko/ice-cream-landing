@@ -1,0 +1,95 @@
+// Modal Read More
+
+.backdrop.is-hidden .modal__read-more {
+    transform: translate(-50%, -50%) scale(0.9);
+}
+
+.close-btn-about-modal {
+    position: absolute;
+    right: 12px;
+    top: 12px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: transparent;
+    background-color: var(--white-color);
+    cursor: pointer;
+    color: getColor('text-color-dark');
+    transition-property: color;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        fill: getColor('accent-color');
+        cursor: pointer;
+    }
+}
+
+.modal__read-more {
+    padding: 32px 60px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    border: 2px solid rgba(248, 210, 78, 1);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2),
+        0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+    transform: translate(-50%, -50%) scale(1);
+    transition-property: transform;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    @media screen and (min-width: 320px) {
+        padding: 28px;
+        max-width: 280px;
+        min-height: 459px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 568px;
+        min-height: 449px;
+    }
+
+    .modal__read-more-heading {
+        color: getColor('text-color-dark');
+        font-size: 20px;
+        font-family: Seymour One;
+        font-weight: 400;
+        line-height: 1.4;
+        margin: 0 0 32px;
+        text-align: center;
+
+        @media screen and (min-width: 320px) and (max-width: 767px) {
+            font-size: 16px;
+        }
+    }
+}
+
+.modal__read-more-txt {
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0em;
+    color: getColor('text-color-dark');
+    margin-top: 32px;
+    max-width: 448px;
+
+    @media screen and (min-width: 320px) and (max-width: 1199px) {
+        font-size: 14px;
+    }
+}
+
+.modal__read-more-video {
+    border-radius: 10px;
+
+    @media screen and (min-width: 320px) and (max-width: 767px) {
+        max-width: 224px;
+        max-height: 199px;
+    }
+
+    @media screen and (min-width: 768px) {
+        max-width: 448px;
+        height: 205px;
+    }
+}

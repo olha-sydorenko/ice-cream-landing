@@ -33,6 +33,10 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.2);
   }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
 }
 
 .buy-now-modal__close-btn {
@@ -197,4 +201,3 @@
   padding-bottom: 20px;
   margin-top: auto;
 }
-
