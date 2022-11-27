@@ -2,7 +2,7 @@
   const refs = {
     openModalBtn: document.querySelector('[data-location-open]'),
     closeModalBtn: document.querySelector('[data-location-close]'),
-    location: document.querySelector('[data-location]'),
+    backdrop: document.querySelector('[data-backdrop]'),
     body: document.querySelector('body'),
   };
 
@@ -10,7 +10,7 @@
   refs.closeModalBtn.addEventListener('click', toggleModal);
 
   function toggleModal() {
-    refs.location.classList.toggle('is-hidden');
+    refs.backdrop.classList.toggle('is-hidden');
     refs.body.classList.toggle('no-scroll');
   }
 })();

@@ -1,8 +1,39 @@
-<div class="backdrop is-hidden" data-location>
+<div class="backdrop is-hidden" data-backdrop>
   <div class="location">
-    <button type="button" class="location-close-btn" data-location-close>
-      <svg>
+    <button type="button" class="location__btn" data-location-close>
+      <svg width="20px" height="20px">
         <use href="./images/icons.svg#icon-modal-close"></use>
       </svg>
     </button>
-    
+    <h2 class="location__title">Our Locations</h2>
+
+    <picture>
+      <source
+        srcset="
+          ./images/location/location-mb-min.png    1x,
+          ./images/location/location-mb@2x-min.png 2x
+        "
+        media="(max-width: 767px)"
+      />
+      <source
+        srcset="
+          ./images/location/location-tb-min.png    1x,
+          ./images/location/location-tb@2x-min.png 2x
+        "
+        media="(min-width: 768px)"
+      />
+
+      <img
+        src="./images/location/location-tb-min.png"
+        alt="Location map"
+        class="location__map"
+        width="448"
+        height="260"
+      />
+    </picture>
+
+    <a href="#" class="location__link" target="_blank" rel="noopener noreferrer"
+      >Open map</a
+    >
+  </div>
+</div>
