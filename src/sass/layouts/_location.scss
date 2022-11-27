@@ -13,10 +13,7 @@
 
   @include tablet {
     width: 568px;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    padding-left: 60px;
-    padding-right: 60px;
+    padding: 32px 60px;
   }
 
   &__btn {
@@ -50,7 +47,7 @@
     }
   }
 
-  &__map {
+  /*&__map {
     width: 224px;
     height: 199px;
     display: block;
@@ -59,8 +56,9 @@
       width: 448px;
       height: 260px;
       margin: 0 auto 32px;
+      text-align: center;
     }
-  }
+  }*/
 
   &__link {
     width: 134px;
@@ -89,4 +87,24 @@
       background-color: #0a8817;
     }
   }
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 100%;
+  position: relative;
+  height: 0;
+  margin-bottom: 32px;
+  border-radius: 10px;
+  @include tablet {
+    padding-bottom: 56.25%;
+  }
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
