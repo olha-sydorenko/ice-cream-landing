@@ -1,41 +1,78 @@
-<section class="hero-section section">
-  <div class="container">
-    <h1 class="hero-title">ice cream made with <span>passion</span> </h1>
-    <div class="hero-btn-wrap">
-      <a class="btn hero-prod-btn link" href="#products">Products</a>
-      <a class="mob-hero-link link" href="#about">How it’s made?</a>
+<section class='hero-section section'>
+  <div class='container'>
+    <h1 class='hero-title'>ice cream made with <span>passion</span></h1>
+    <div class='hero-btn-wrap'>
+      <a class='btn hero-prod-btn link' href='#products'>Products</a>
+      <a class='mob-hero-link link' href='#about'>How it’s made?</a>
     </div>
-    <div class="hero-content-wrap">
+    <div class='hero-content-wrap'>
       <picture>
-        <source srcset="
+        <source srcset='
                 ./images/hero/plate-ds.png 1x,
                 ./images/hero/plate-ds@2x.png 2x
-                "
-                media="(min-width:1200)">
-        <source srcset="
+                '
+                media='(min-width:1200px)'>
+        <source srcset='
                 ./images/hero/plate-tb.png 1x,
                 ./images/hero/plate-tb@2x.png 2x
-                "
-                media="(min-width:768)">
+                '
+                media='(min-width:768px)'>
 
-      <img src="./images/hero/plate-ds.png" width="225" height="225">
+        <img src='./images/hero/plate-ds.png' alt='Plate with ice'>
       </picture>
-      <p class="hero-text">
+      <p class='hero-text'>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et
       </p>
     </div>
-    <ul class="hero-info list">
-      <li class="hero-info-item">
+    <ul class='hero-info list'>
+      <li class='hero-info-item'>
         <p><span>16</span>cafes</p>
       </li>
-      <li class="hero-info-item">
+      <li class='hero-info-item'>
         <p><span>23</span>food trucks</p>
       </li>
     </ul>
-<!--    <div class="canva>">-->
-<!--      <img class="decor-blur" src="./images/hero/blur@1x.png" width='320'>-->
-<!--      <img class="decor-ice" src="./images/hero/hero-ice-cream-mb.png" width='320'>-->
-<!--    </div>-->
+  </div>
+  <div class='canvas'>
+    <picture class='hero-picture'>
+      <source srcset='
+                ./images/hero/hero-ice-cream-ds.png 1x,
+                ./images/hero/hero-ice-cream-ds@2x.png 2x
+                '
+              media='(min-width:1200px)'>
+      <source srcset='
+                ./images/hero/hero-ice-cream-tb.png 1x,
+                ./images/hero/hero-ice-cream-tb@2x.png 2x
+                 '
+              media='(min-width:768px)'>
+      <source srcset='
+               ./images/hero/hero-ice-cream-mb.png 1x,
+                ./images/hero/hero-ice-cream-mb@2x.png 2x
+                '
+              media='(max-width:767px)'>
+
+      <img class='hero-picture' src='./images/hero/hero-ice-cream-ds.png' alt='Ice'>
+    </picture>
+    <picture class='hero-picture-blur'>
+      <source srcset='
+          ./images/hero/blur-desk.png 1x,
+           ./images/hero/blur-desk@2x.png 2x
+                '
+              media='(min-width:1200px)'>
+      <source srcset='
+                ./images/hero/blur-tab.png 1x,
+                ./images/hero/blur-tab@2x.png 2x
+                 '
+              media='(min-width:768px)'>
+      <source srcset='
+       ./images/hero/blur-mob.png 1x,
+                ./images/hero/blur-mob@2x.png 2x
+                '
+
+              media='(max-width:767px)'>
+
+      <img class='hero-picture-blur' src='./images/hero/blur-desk.png' alt='blur'>
+    </picture>
   </div>
 </section>

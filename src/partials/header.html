@@ -1,78 +1,83 @@
-<header class="header">
-  <div class="container">
-    <nav class="navigation">
-        <a class="header-logo-link" href="index.html">
-          <picture>
-            <source srcset="
+<header class='header'>
+  <div class='container'>
+    <nav class='navigation'>
+      <a class='header-logo-link' href='index.html'>
+        <picture class='header-logo'>
+          <source srcset='
                 ./images/header/logo-desk@1x.png 1x,
                 ./images/header/logo-desk@2x.png 2x
-                " media="(min-width:1200)">
-            <source srcset="
+                '
+                  media='(min-width:1200px)'>
+          <source srcset='
                 ./images/header/logo-tb@1x.png 1x,
                 ./images/header/logo-tb@2x.png 2x
-                " media="(min-width:768)">
-            <source srcset="
-                ./images/header/logo-mob@1x.png 1x,
+                 '
+                  media='(min-width:768px)'>
+          <source srcset='
+               ./images/header/logo-mob@1x.png 1x,
                 ./images/header/logo-mob@2x.png 2x
-                " media="(max-width:767)">
-          <img class="header-logo" src="./images/header/logo-desk@1x.png" alt="logo" width="60" height="65">
-          </picture>
-            </a>
-      <ul class="header-menu list">
-        <li class="header-menu-item"><a class="link" href="index.html">Home</a></li>
-        <li class="header-menu-item"><a class="link" href="#about">How it’s made?</a></li>
-        <li class="header-menu-item"><a class="link" href="#products">Our products</a></li>
-        <li class="header-menu-item"><a class="link" href="#contacts">Contact</a></li>
+                '
+                  media='(max-width:767px)'>
+
+          <img class='header-logo' src='./images/header/logo-desk@1x.png' alt='logo'>
+        </picture>
+      </a>
+      <ul class='header-menu list'>
+        <li class='header-menu-item'><a class='link' href='index.html'>Home</a></li>
+        <li class='header-menu-item'><a class='link' href='#about'>How it’s made?</a></li>
+        <li class='header-menu-item'><a class='link' href='#products'>Our products</a></li>
+        <li class='header-menu-item'><a class='link' href='#contacts'>Contact</a></li>
       </ul>
     </nav>
-    <button class="mob-menu-btn" type="button" data-menu-open>
-      <svg class="header-icon header-menu-icon" width="32" height="32">
+    <button class='mob-menu-btn' type='button' data-menu-open>
+      <svg class='header-icon header-menu-icon' width='32' height='32'>
         <use href='./images/header/header-icons.svg#icon-eva_menu-fill'></use>
       </svg>
     </button>
-      <button class="buy-btn btn" type="button" data-modal-buy-now-open>Buy now
-        <svg width="12" height="12">
-          <use href="./images/header/header-icons.svg#icon-ep_arrow-right-bold"></use>
-        </svg></button>
+    <button class='buy-btn btn' type='button' data-modal-buy-now-open>Buy now
+      <svg width='12' height='12'>
+        <use href='./images/header/header-icons.svg#icon-ep_arrow-right-bold'></use>
+      </svg>
+    </button>
 
-    <div class="mob-menu-container mob-menu-hidden" data-menu>
-      <button class="mob-header-close-btn close-btn" type="button" data-menu-close>
-        <svg class="header-icon header-close-icon " width="32" height="32">
+    <div class='mob-menu-container mob-menu-hidden' data-menu>
+      <button class='mob-header-close-btn close-btn' type='button' data-menu-close>
+        <svg class='header-icon header-close-icon ' width='32' height='32'>
           <use href='./images/header/header-icons.svg#icon-ep_close'></use>
         </svg>
       </button>
-      <div class="mob-menu-wrap">
+      <div class='mob-menu-wrap'>
         <div class='mob-menu-wrap-top'>
-          <nav class="nav">
-            <a class="menu-header-logo" href="index.html">
-              <picture>
-                <source srcset="
-                ./images/header/logo-tb@1x.png 1x,
-                ./images/header/logo-tb@2x.png 2x
-                " media="(min-width:768)">
-                <source srcset="
-                ./images/header/logo-mob@1x.png 1x,
-                ./images/header/logo-mob@2x.png 2x
-                " media="(max-width:767)">
-                <img class="mob-header-menu-logo" src="./images/header/logo-tb@1x.png" alt="logo" width="48" height="44">
-              </picture>
-            </a>
-            <ul class="mob-header-menu list">
-              <li class="mob-header-menu-item"><a class="link" href="index.html">Home</a></li>
-              <li class="mob-header-menu-item"><a class="link" href="#about">How it’s made?</a></li>
-              <li class="mob-header-menu-item"><a class="link" href="#products">Our products</a></li>
-              <li class="mob-header-menu-item"><a class="link" href="#contacts">Contact</a></li>
+          <nav class='nav'>
+            <!--            <a href="index.html">-->
+            <!--              <picture>-->
+            <!--                <source srcset="-->
+            <!--                ./images/header/logo-tb@1x.png 1x,-->
+            <!--                ./images/header/logo-tb@2x.png 2x-->
+            <!--                " media="(min-width:768px)">-->
+            <!--                <source srcset="-->
+            <!--                ./images/header/logo-mob@1x.png 1x,-->
+            <!--                ./images/header/logo-mob@2x.png 2x-->
+            <!--                " media="(max-width:767px)">-->
+            <!--                <img class="mob-header-menu-logo" src="./images/header/logo-tb@1x.png" alt="logo" width="48" height="44">-->
+            <!--              </picture>-->
+            <!--            </a>-->
+            <ul class='mob-header-menu list'>
+              <li class='mob-header-menu-item'><a class='link' href='index.html'>Home</a></li>
+              <li class='mob-header-menu-item'><a class='link' href='#about'>How it’s made?</a></li>
+              <li class='mob-header-menu-item'><a class='link' href='#products'>Our products</a></li>
+              <li class='mob-header-menu-item'><a class='link' href='#contacts'>Contact</a></li>
             </ul>
           </nav>
         </div>
         <div class='mob-menu-wrap-bottom'>
-          <button class="btn mob-buy-btn" type="button" data-modal-buy-now-open>Buy now
-            <svg width="12" height="12">
-              <use href="./images/header/header-icons.svg#icon-ep_arrow-right-bold"></use>
+          <button class='btn mob-buy-btn' type='button' data-modal-buy-now-open>Buy now
+            <svg width='12' height='12'>
+              <use href='./images/header/header-icons.svg#icon-ep_arrow-right-bold'></use>
             </svg>
           </button>
         </div>
       </div>
-      </div>
+    </div>
   </div>
 </header>

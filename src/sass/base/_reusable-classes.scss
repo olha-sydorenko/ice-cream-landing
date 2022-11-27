@@ -2,8 +2,8 @@
   width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 15px;
-  padding-left: 15px;
+  padding-right: 20px;
+  padding-left: 20px;
 
   @include mobile {
     max-width: 480px;
@@ -70,6 +70,10 @@
   clip: rect(0 0 0 0);
 }
 
+// .no-scroll {
+//   overflow: hidden;
+// }
+
 .btn {
   height: 42px;
   font-weight: 600;
@@ -77,12 +81,56 @@
   line-height: 1.28;
   color: getColor('text-color-dark');
   border-radius: 10px;
+  outline: transparent;
+  transition: color $time-hover $time-function,
+    background-color $time-hover $time-function,
+    border-color $time-hover $time-function;
 }
 
 .btn--fill {
+  border: transparent;
   background-color: getColor('accent-color');
+
+  &:hover,
+  &:focus {
+    background-color: getColor('button-active-color');
+  }
+
+  &:focus {
+    color: getColor('text-color-light');
+  }
 }
 
 .btn--bordered {
+  background-color: transparent;
   border: 2px solid getColor('accent-color');
+
+  &:hover,
+  &:focus {
+    border-color: getColor('button-active-color');
+  }
+
+  &:focus {
+    color: getColor('text-color-light');
+  }
 }
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 1;
+  transition: opacity $time-hover $time-function,
+    visibility $time-hover $time-function;
+
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+}
+

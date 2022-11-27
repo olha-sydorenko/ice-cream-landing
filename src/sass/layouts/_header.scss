@@ -1,28 +1,3 @@
-.is-hidden {
-  visibility: hidden;
-  opacity: 0;
-  pointer-events: none;
-}
-
-img {
-  display:block;
-  max-width: 100%;
-  height: auto;
-}
-
-.logo-icon {
-  width: 40px ;
-  height: 37px;
-  @include tablet {
-    width: 48px ;
-    height: 44px;
-  }
- @include desktop {
-   width: 60px ;
-   height: 65px;
- }
-}
-
 .header {
   position: absolute;
   width: 100%;
@@ -44,8 +19,11 @@ img {
 
 .header-logo-link {
   position: absolute;
-  z-index: 1;
-  top:0;
+  z-index: 100;
+  top: 0;
+  @include tablet {
+    top: 12px;
+  }
 }
 
 .mob-header-menu {
@@ -60,11 +38,11 @@ img {
   margin-bottom: 32px;
 }
 
-.mob-header-menu-item .link{
+.mob-header-menu-item .link {
   color: #FCFCFC;
 }
 
-.mob-header-menu-item:hover .link{
+.mob-header-menu-item:hover .link {
   color: #131313;
 }
 
@@ -73,17 +51,21 @@ img {
   padding-bottom: 64px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   height: 100%;
+  @include tablet {
+    padding-top: 140px;
+    padding-bottom: 528px;
+  }
 }
 
 .menu-header-logo {
-position: absolute;
-  top:12px;
-  left:15px;
+  position: absolute;
+  top: 12px;
+  left: 15px;
   @include tablet {
-    top:20px;
+    top: 20px;
   }
 }
 
@@ -100,10 +82,10 @@ position: absolute;
   padding: 0;
 }
 
-.mob-header-close-btn{
-  top:12px;
+.mob-header-close-btn {
+  top: 12px;
   @include tablet {
-    top:32px;
+    top: 32px;
   }
 }
 
@@ -112,11 +94,12 @@ position: absolute;
   align-items: center;
   z-index: 1;
   top: 4px;
+  outline: none;
   @include tablet {
-    top:29px;
+    top: 29px;
     right: 216px;
   }
-  @include  desktop {
+  @include desktop {
     display: none;
   }
 }
@@ -130,16 +113,20 @@ position: absolute;
   display: flex;
   outline: none;
   transition: color $time-hover $time-function, background-color $time-hover $time-function;
+
   &:hover {
-background-color: #0A8817;
+    background-color: #0A8817;
   }
+
   &:focus {
     background-color: #0A8817;
     color: #FCFCFC;
   }
+
   &:disabled {
-   background-color: #ABABAB;
+    background-color: #ABABAB;
   }
+
   & svg {
     stroke: currentColor;
   }
@@ -162,9 +149,9 @@ background-color: #0A8817;
   height: 100vh;
   background-color: #84a178;
   position: fixed;
-  top:0;
+  top: 0;
   left: 0;
-  z-index: 1;
+  z-index: 50;
   margin-bottom: 100px;
   transition: 1s;
   @include tablet {
@@ -185,7 +172,7 @@ background-color: #0A8817;
     z-index: 1;
     top: 40px;
     margin: 0 364px;
-    gap:28px;
+    gap: 28px;
     &-item {
       font-family: 'Montserrat';
       font-style: normal;
@@ -195,9 +182,10 @@ background-color: #0A8817;
   }
 }
 
-.header-menu-item>a {
+.header-menu-item > a {
   color: #FCFCFC;
   transition: color $time-hover $time-function;
+
   &:hover, &:focus {
     color: #F8D24E;
   }
@@ -209,7 +197,7 @@ background-color: #0A8817;
     display: flex;
     position: absolute;
     z-index: 1;
-    top:24px;
+    top: 24px;
     right: 15px;
   }
 }

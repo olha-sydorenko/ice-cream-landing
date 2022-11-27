@@ -1,0 +1,200 @@
+.backdrop-buy-now {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  @include tablet {
+    padding-block: 0;
+  }
+}
+
+.buy-now-modal {
+  position: relative;
+  width: 280px;
+  padding: 28px;
+  background-color: #fcfcfc;
+  border: 2px solid getColor('accent-color');
+  border-radius: 10px;
+  overflow: auto;
+  transition: transform $time-hover $time-function,
+    opacity $time-hover $time-function;
+
+  @include tablet {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%) scale(1);
+    width: 568px;
+    padding: 32px 54px;
+  }
+
+  .backdrop.is-hidden & {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+}
+
+.buy-now-modal__close-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 0;
+  width: 20px;
+  height: 20px;
+  border: none;
+  background-color: transparent;
+  outline: transparent;
+  transition: fill $time-hover $time-function,
+    transform $time-hover $time-function;
+
+  &:hover,
+  &:focus {
+    fill: getColor('accent-color');
+    transform: scale(1.4);
+  }
+}
+
+.buy-now-modal__title {
+  margin-bottom: 83px;
+  text-align: center;
+  font-family: getFontFamily('secondary');
+  font-size: 16px;
+  line-height: 1.5;
+  color: getColor('text-color-dark');
+
+  @include tablet {
+    font-size: 20px;
+    line-height: 1.4;
+    margin-bottom: 103px;
+  }
+}
+
+.buy-now-modal__list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 83px;
+  margin-bottom: 28px;
+
+  @include tablet {
+    flex-direction: row;
+    gap: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+.buy-now-modal__item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 132px;
+  height: 136px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.25;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: getColor('text-color-dark');
+  border-radius: 15.7808px;
+
+  @include tablet {
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 60px;
+    width: 132px;
+    height: 132px;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 67px;
+    width: 132px;
+    height: 132px;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &:first-child {
+    border: 2px solid #96af8c;
+
+    &::before {
+      background: linear-gradient(
+          rgba(156, 190, 143, 0.7),
+          rgba(156, 190, 143, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.26027px 19.726px rgba(10, 136, 23, 0.25);
+    }
+
+    &::after {
+      background-image: url(../images/modal-buy/ice-cream-mb.png);
+
+      @include retina {
+        & {
+          background-image: url(../images/modal-buy/ice-cream-mb@2x.png);
+        }
+      }
+    }
+  }
+
+  &:nth-child(2) {
+    background-color: #efd478;
+
+    &::before {
+      background: linear-gradient(
+          0deg,
+          rgba(248, 210, 78, 0.7),
+          rgba(248, 210, 78, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.26027px 19.726px rgba(153, 114, 23, 0.25);
+    }
+
+    &::after {
+      background-image: url(../images/modal-buy/ice-coffee-mb.png);
+
+      @include retina {
+        & {
+          background-image: url(../images/modal-buy/ice-coffee-mb@2x.png);
+        }
+      }
+    }
+  }
+
+  &:last-child {
+    border: 2px solid #d6936d;
+
+    &::before {
+      background: linear-gradient(
+          0deg,
+          rgba(213, 117, 63, 0.7),
+          rgba(213, 117, 63, 0.7)
+        ),
+        #d9d9d9;
+      box-shadow: 0px 5.26027px 19.726px rgba(0, 0, 0, 0.25);
+    }
+
+    &::after {
+      background-image: url(../images/modal-buy/milkshakes-mb.png);
+
+      @include retina {
+        & {
+          background-image: url(../images/modal-buy/milkshakes-mb@2x.png);
+        }
+      }
+    }
+  }
+}
+
+.buy-now-modal__product-title {
+  padding-bottom: 20px;
+  margin-top: auto;
+}
+
