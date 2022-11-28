@@ -1,0 +1,113 @@
+.location {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 280px;
+  min-height: 365px;
+  opacity: 1;
+  padding: 28px;
+  border: 2px solid #f8d24e;
+  border-radius: 10px;
+  background-color: #fcfcfc;
+
+  @include tablet {
+    width: 568px;
+    padding: 32px 60px;
+  }
+
+  &__btn {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: transparent;
+    @include tablet {
+      width: 24px;
+      height: 24px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    font-family: getFontFamily('secondary'), sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    color: getColor('text-color-dark');
+    text-align: center;
+    @include tablet {
+      margin-bottom: 32px;
+      font-size: 20px;
+      line-height: 1.4px;
+    }
+  }
+
+  /*&__map {
+    width: 224px;
+    height: 199px;
+    display: block;
+    margin: 0 auto 24px;
+    @include tablet {
+      width: 448px;
+      height: 260px;
+      margin: 0 auto 32px;
+      text-align: center;
+    }
+  }*/
+
+  &__responsive {
+    overflow: hidden;
+    padding-bottom: 90.5%;
+    position: relative;
+    height: 0;
+    width: 224px;
+    margin-bottom: 24px;
+    border-radius: 10px;
+    @include tablet {
+      padding-bottom: 58.5%;
+      margin-bottom: 32px;
+      width: 448px;
+    }
+  }
+
+  &__responsive iframe {
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  &__link {
+    width: 134px;
+    height: 42px;
+    display: block;
+    margin: 0 auto;
+    padding: 12px 34px;
+    color: getColor('text-color-dark');
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 1.25;
+    text-align: center;
+    background-color: #f8d24e;
+    border-radius: 10px;
+    @include tablet {
+      width: 145px;
+      font-size: 14px;
+      line-height: 1.2;
+    }
+    &:hover {
+      color: #000000;
+      background-color: #0a8817;
+    }
+    &focus {
+      color: #ffffff;
+      background-color: #0a8817;
+    }
+  }
+}
