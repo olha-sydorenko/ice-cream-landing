@@ -17,8 +17,8 @@
   }
 
   &__btn {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
     position: absolute;
     top: 12px;
     right: 12px;
@@ -27,6 +27,7 @@
     justify-content: center;
     border: none;
     background-color: transparent;
+
     @include tablet {
       width: 24px;
       height: 24px;
@@ -36,6 +37,7 @@
     &:focus {
       fill: getColor('accent-color');
     }
+
   }
 
   &__title {
