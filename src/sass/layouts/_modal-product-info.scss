@@ -11,6 +11,7 @@
 .product-info-modal {
   position: relative;
   width: 280px;
+  max-height: 100%;
   padding: 28px 20px;
   background-color: #fcfcfc;
   border: 2px solid getColor('accent-color');
@@ -32,6 +33,10 @@
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.2);
   }
+
+  &::-webkit-scrollbar {
+    width: 5px;
+  }
 }
 
 .product-info-modal__close-btn {
@@ -45,12 +50,20 @@
   background-color: transparent;
   outline: transparent;
   transition: fill $time-hover $time-function,
-    transform $time-hover $time-function;
+    border-color $time-hover $time-function;
+
+  @include tablet {
+    width: 24px;
+    height: 24px;
+  }
 
   &:hover,
   &:focus {
     fill: getColor('accent-color');
-    transform: scale(1.4);
+  }
+  
+  &:focus {
+    border-color: getColor('accent-color');
   }
 }
 
@@ -207,4 +220,3 @@
   line-height: 1.76;
   letter-spacing: 0.04em;
 }
-

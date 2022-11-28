@@ -3,42 +3,37 @@
   <div class="container">
     <p class="section__description about__pre-heading">Tradition and love</p>
     <h2 class="section__title adout__heading">How it’s made?</h2>
-    <div class="about__wrapper">
-      <picture class="about__img-cover">
-        <source
-          srcset="
-            ./images/about-img-desktop-1x.jpg 1x,
-            ./images/about-img-desktop-2x.jpg 2x
-          "
-          media="min-width: 1200px"
-        />
-        <source
-          srcset="
-            ./images/about-img-tablet-1x.jpg 1x,
-            ./images/about-img-tablet-2x.jpg 2x
-          "
-          media="min-width: 768px"
-        />
-        <source
-          srcset="
-            ./images/about-img-mob-1x.jpg 1x,
-            ./images/about-img-mob-2x.jpg 2x
-          "
-          media="min-width: 480px"
-        />
-        <div class="about__img-wrap">
-          <img
-            class="about__main-img"
+    <div class="about__content">
+      <div class="about__wrapper">
+        <picture class="about__img-cover">
+          <source
             srcset="
-              ./images/about-img-desktop-1x.jpg 1x,
-              ./images/about-img-desktop-2x.jpg 2x
+              ./images/about/about-ds.png    1x,
+              ./images/about/about-ds@2x.png 2x
             "
-            src="./images/about-img-desktop-1x.jpg"
+            media="(min-width: 1200px)"
+          />
+          <source
+            srcset="
+              ./images/about/about-tb.png    1x,
+              ./images/about/about-tb@2x.png 2x
+            "
+            media="(min-width: 768px)"
+          />
+          <source
+            srcset="
+              ./images/about/about-mb.png    1x,
+              ./images/about/about-mb@2x.png 2x
+            "
+            media="(min-width: 320px)"
+          />
+          <img
+            src="./images/about/about-ds.png"
             class="about__img"
             alt="A cow in a meadow"
           />
-        </div>
-      </picture>
+        </picture>
+      </div>
 
       <div class="about__info">
         <div class="about__txt-wrap">
@@ -57,7 +52,11 @@
             This is enough to choose ice cream and coffee for any mood!
           </p>
         </div>
-        <button type="button" class="btn btn--fill about__btn">
+        <button
+          type="button"
+          class="btn btn--fill about__btn"
+          data-modal__read-more-open
+        >
           Read more
           <svg width="12" height="12">
             <use href="./images/icons.svg#icon-arrow-right-bold"></use>
@@ -68,32 +67,3 @@
   </div>
 </section>
 <!-- End About Section -->
-
-<!-- Modal Read More -->
-<div class="backdrop is-hidden" data-modal>
-  <div class="modal">
-    <form class=".js-speaker-form" action="data">
-      <h2 class="modal-heading">How it’s made?</h2>
-      <video
-        class="modal__read-more-video"
-        src="http://techslides.com/demos/sample-videos/small.webm"
-        poster="https://images.pexels.com/photos/595804/pexels-photo-595804.jpeg?w=640"
-        width="448"
-        height="205"
-        controls
-        preload="auto"
-      ></video>
-      <p class="modal__read-more-txt">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-        tempor incididunt ut labore et Lorem ipsum dolor sit amet, consectetur
-        adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-      </p>
-    </form>
-
-    <button type="button" class="close-btn-modal" data-modal-close>
-      <svg class="close-modal-icon" width="24" height="24">
-        <use href="./images/icons.svg#icon-modal-close"></use>
-      </svg>
-    </button>
-  </div>
-</div>

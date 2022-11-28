@@ -43,6 +43,18 @@
   }
 }
 
+.reviews {
+  padding-bottom: 393px;
+
+  @include tablet {
+    padding-bottom: 380px;
+  }
+
+  @include desktop {
+    padding-bottom: 228px;
+  }
+}
+
 .review__box {
   background-color: #84a178;
   border-radius: 10px;

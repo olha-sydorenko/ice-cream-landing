@@ -1,0 +1,272 @@
+.hero-section {
+  width: 100%;
+  background-color: #84A178;
+  padding-top: 99px;
+  padding-bottom: 236px;
+  position: relative;
+  background-image: url("../images/hero/decor-mob.svg");
+  background-repeat: no-repeat;
+  background-position: bottom;
+
+  @media screen and (max-width: 479px) {
+    background-size: 100vw;
+  }
+  @media (min-width: 480px) and (max-width: 767px){
+    background-size: 480px;
+  }
+  @include tablet {
+    padding-top: 80px;
+    padding-bottom: 12px;
+    background-image: url("../images/hero/decor-tablet.svg");
+    background-size: 768px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+  }
+  @include desktop {
+    background-image: url("../images/hero/decor-desk.svg");
+    background-size: 1200px;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    padding-top: 118px;
+    padding-bottom: 65px;
+  }
+}
+
+.hero-section > .container {
+  position: relative;
+  z-index: 10;
+}
+
+.hero-title {
+  max-width: 247px;
+  font-family: 'Seymour One';
+  @include font(26, 1.27, 400, 0.04);
+  text-transform: uppercase;
+  color: #FCFCFC;
+
+  & span {
+    font-size: 34px;
+    @include desktop {
+      @include font(38, 1.26, 400, 0.04);
+    }
+  }
+
+  @include desktop {
+    margin-top: 16px;
+    max-width: 367px;
+    @include font(38, 1.26, 400, 0.04);
+  }
+}
+
+.hero-btn-wrap {
+  display: flex;
+  margin-top: 32px;
+  outline: none;
+  @include tablet {
+    margin-top: 24px;
+  }
+  @include desktop {
+    margin-top: 28px;
+  }
+}
+
+.hero-prod-btn {
+  font-family: 'Montserrat';
+  font-style: normal;
+  @include font(12, 1.25, 600, null);
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #000000;
+  padding: 11px 26px;
+  border: 2px solid #F8D24E;
+  border-radius: 8px;
+  background-color: transparent;
+  outline: none;
+  @include desktop {
+    @include font(14, 1.29, 600, null);
+    transition: color $time-hover $time-function, border-color $time-hover $time-function;
+  }
+
+  &:focus {
+    border: 2px solid #0A8817;
+    @include desktop {
+      border-color: #0A8817;
+      color: #FCFCFC;
+    }
+  }
+
+  &:hover {
+    @include desktop {
+      border-color: #0A8817;
+    }
+  }
+
+  &:disabled {
+    @include desktop {
+      border-color: #ABABAB;
+      color: #131313;
+    }
+  }
+}
+
+.mob-hero-link {
+  @include font(12, 1.25, 600, null);
+  color: #F8D24E;
+  display: flex;
+  align-items: center;
+  margin-left: 12px;
+  text-decoration: underline;
+  text-decoration-skip-ink: none;
+  transition: color $time-hover $time-function;
+  @include desktop {
+    @include font(14, 1.21, 600, null);
+  }
+
+  &:focus {
+    color: #FCFCFC;
+  }
+
+  &:hover {
+    color: #0A8817;
+  }
+
+  &:disabled {
+    color: #ABABAB;
+  }
+}
+
+.hero-content-wrap {
+  display: none;
+  @include tablet {
+    display: flex;
+    margin-top: 12px;
+    @include desktop {
+      margin-top: 42px;
+    }
+  }
+}
+
+.hero-text {
+  display: none;
+  @include tablet {
+    @include font(12, 1.4, 400, null);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 151px;
+    margin-left: 32px;
+
+    &::after {
+      content: "";
+      background-image: url("../images/hero/arrow.svg");
+      background-repeat: no-repeat;
+      width: 40px;
+      height: 16px;
+      margin-top: 20px;
+      @include desktop {
+
+      }
+    }
+    @include desktop {
+      margin-top: 20px;
+      margin-left: 16px;
+      max-width: 200px;
+      @include font(14, 1.4, 400, null);
+    }
+  }
+}
+
+.hero-info {
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 14px;
+    right: 15px;
+    @include font(8, 1.25, 400, null);
+    text-align: right;
+    gap: 24px;
+  }
+  @include desktop {
+    gap: 16px;
+    top: 8px;
+  }
+}
+
+.hero-info-item {
+  display: none;
+  @include tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    & span {
+      color: #131313;
+      @include font(28, 1.21, 900, 0.04);
+      text-align: right;
+      display: flex;
+      flex-direction: column;
+      @include desktop {
+        @include font(46, 1.22, 900, 0.04);
+      }
+    }
+    @include desktop {
+      @include font(14, null, 400, null);
+    }
+  }
+}
+
+.canvas {
+  width: 176px;
+  height: 236px;
+  margin: 0 auto;
+  padding-left: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: ice-emergence 1s ;
+  @include tablet {
+    width: 268px;
+    height: 342px;
+    left: 316px;
+  }
+  @include desktop {
+    width: 477px;
+    height: 590px;
+    left: 522px;
+  }
+}
+
+.hero-picture-blur {
+  position: absolute;
+  bottom: 0;
+  z-index: 0;
+  width: 130%;
+  @include tablet {
+    width: 120%;
+  }
+}
+
+.hero-picture {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+  left: 4px;
+}
+.canvas-wrap {
+  position: relative;
+  overflow: hidden;
+}
+
+
+@keyframes ice-emergence {
+  0%  {left: -100%;
+  z-index: 500;
+  opacity: 0}
+  100% {
+    opacity: 1;
+  }
+}
