@@ -102,7 +102,6 @@
     gap: 4px;
     align-items: center;
     justify-content: center;
-    cursor: pointer;
 
     transition-property: background-color;
     transition-duration: 250ms;
@@ -116,11 +115,10 @@
     &:hover,
     &:focus {
       background-color: getColor(button-active-color);
-      cursor: pointer;
     }
     &:focus {
       color: #ffffff;
-      cursor: pointer;
+
       fill: #ffffff;
     }
   }
@@ -206,4 +204,3 @@
     top: 39px;
   }
 }
-

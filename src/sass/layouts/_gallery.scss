@@ -24,10 +24,11 @@
 }
 
 .two-swipers {
-  background-image: url('../images/bg/gallery-bg-ds@2x.png');
+  background-color: #84a178;
+  background-image: url('../images/gallery/bgtest.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: 0px 100px;
 }
 
 .responce-photo {
@@ -128,7 +129,7 @@
 .gallery__image {
   width: 280px;
   height: 130px;
-  border-radius: 8px;
+  border-radius: 17px;
   @include tablet {
     width: 704px;
     height: 327px;
@@ -137,4 +138,8 @@
     width: 1013px;
     height: 422px;
   }
+}
+
+.swiper-pagination-clickable .swiper-pagination-bullet{
+  cursor: url('./../images/cursoryellow.png'), pointer;
 }
