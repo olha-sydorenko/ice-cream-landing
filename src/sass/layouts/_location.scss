@@ -89,25 +89,14 @@
     display: block;
     margin: 0 auto;
     padding: 12px 34px;
-    color: getColor('text-color-dark');
     font-size: 12px;
-    font-weight: 600;
     line-height: 1.25;
     text-align: center;
-    background-color: #f8d24e;
-    border-radius: 10px;
+
     @include tablet {
       width: 145px;
       font-size: 14px;
       line-height: 1.2;
-    }
-    &:hover {
-      color: #000000;
-      background-color: #0a8817;
-    }
-    &focus {
-      color: #ffffff;
-      background-color: #0a8817;
     }
   }
 }
